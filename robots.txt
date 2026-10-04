@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://priyanthd0712.github.io/IQ-Test/sitemap.xml
