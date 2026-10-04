@@ -3,209 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IQ Challenge</title>
+<title>Free IQ Test – 15 Challenging Questions | 10-Minute IQ Challenge</title>
+<meta name="description" content="Take a free 15-question IQ-style test with a 10-minute time limit. Test logic, patterns, mathematics and reasoning, then get your score, IQ-style estimate, category and e-certificate.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://priyanthd0712.github.io/IQ-Test/">
+<meta property="og:title" content="Free IQ Test – 15 Challenging Questions">
+<meta property="og:description" content="A free 10-minute IQ-style challenge with 15 logic, pattern, math and reasoning questions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://priyanthd0712.github.io/IQ-Test/">
+<meta name="theme-color" content="#6d28d9">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Free IQ Test – 15 Challenging Questions",
+  "url":"https://priyanthd0712.github.io/IQ-Test/",
+  "description":"A free 15-question, 10-minute IQ-style challenge covering logic, patterns, mathematics and reasoning."
+}
+</script>
 <style>
-*{box-sizing:border-box;font-family:Inter,Arial,sans-serif}
-body{margin:0;min-height:100vh;background:linear-gradient(135deg,#0f172a,#312e81,#4f46e5);color:#111827;padding:25px}
-.app{max-width:850px;margin:auto;background:#fff;border-radius:24px;box-shadow:0 25px 70px #0006;overflow:hidden}
-.header{background:linear-gradient(135deg,#312e81,#4f46e5);color:#fff;padding:30px;text-align:center}
-.header h1{margin:0;font-size:2.4rem}.header p{opacity:.9;margin:8px 0 0}
-.content{padding:32px}.hidden{display:none}
-.center{text-align:center}.intro{color:#4b5563;line-height:1.7}
-input{width:100%;padding:15px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;margin:15px 0;outline:none}
-input:focus{border-color:#6366f1}
-button{border:0;border-radius:12px;padding:13px 21px;background:#4f46e5;color:white;font-size:16px;cursor:pointer;margin:5px}
-button:hover{background:#4338ca;transform:translateY(-1px)}
-.secondary{background:#111827}.gray{background:#6b7280}
-.top{display:flex;justify-content:space-between;gap:15px;font-weight:bold;margin-bottom:15px}
-.timer{color:#dc2626}.bar{height:9px;background:#e5e7eb;border-radius:20px;overflow:hidden;margin-bottom:27px}
-.progress{height:100%;background:#4f46e5;width:0%;transition:.3s}
-.question{font-size:22px;font-weight:700;line-height:1.5;margin-bottom:22px}
-.answers{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.answer{width:100%;text-align:left;background:#f3f4f6;color:#111827;border:2px solid transparent;margin:0}
-.answer:hover{background:#eef2ff}.answer.selected{background:#c7d2fe;border-color:#4f46e5}
-.controls{text-align:right;margin-top:25px}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:25px 0}
-.card{background:#f8fafc;border-radius:16px;padding:20px}.big{font-size:42px;font-weight:800;color:#4338ca}
-.category{font-size:24px;font-weight:800;margin:10px 0;color:#312e81}
-.rankbox{margin-top:25px;text-align:left}.rankbox h2{text-align:center}
-table{width:100%;border-collapse:collapse;margin-top:12px}th,td{padding:11px;border-bottom:1px solid #e5e7eb;text-align:left}th{background:#eef2ff}
-.note{font-size:13px;color:#6b7280;line-height:1.5;margin-top:18px}
-@media(max-width:650px){.answers,.result-grid{grid-template-columns:1fr}.content{padding:22px}.header h1{font-size:2rem}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#111827,#312e81,#6d28d9);color:#111827;min-height:100vh}
+header{color:white;text-align:center;padding:42px 18px 30px}
+header h1{margin:0 0 10px;font-size:clamp(30px,6vw,52px)}
+header p{margin:6px auto;max-width:760px;opacity:.94}
+.container{width:min(980px,92%);margin:0 auto 50px}
+.card{background:white;border-radius:20px;padding:28px;box-shadow:0 16px 45px #0003;margin-bottom:22px}
+.hidden{display:none}
+input[type=text]{width:100%;padding:14px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;margin:10px 0 16px}
+button{border:0;border-radius:10px;padding:13px 18px;font-size:16px;font-weight:700;cursor:pointer;background:#6d28d9;color:white}
+button:hover{filter:brightness(1.08)}
+button.secondary{background:#e5e7eb;color:#111827}
+.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.timer{font-weight:800;font-size:20px;color:#b91c1c}
+.progress{height:9px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin-bottom:22px}
+.progress>div{height:100%;background:#7c3aed;width:0}
+.question{font-size:21px;font-weight:700;line-height:1.4}
+.option{display:block;border:1px solid #d1d5db;border-radius:10px;padding:13px;margin:10px 0;cursor:pointer}
+.option:hover{background:#f5f3ff;border-color:#8b5cf6}
+.option input{margin-right:10px}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.stat{background:#f5f3ff;border-radius:14px;padding:18px;text-align:center}
+.stat strong{display:block;font-size:32px;color:#5b21b6;margin-top:6px}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:10px;border-bottom:1px solid #e5e7eb}
+.badge{display:inline-block;background:#ede9fe;color:#5b21b6;padding:7px 12px;border-radius:999px;font-weight:700}
+.small{font-size:13px;color:#6b7280;line-height:1.55}
+.certificate{border:10px double #6d28d9;padding:45px;text-align:center;margin-top:20px;background:#fff}
+.certificate h2{font-size:38px;color:#5b21b6;margin:8px}
+.certificate .name{font-size:30px;font-weight:800;margin:22px 0}
+footer{color:#e5e7eb;text-align:center;padding:25px}
+@media(max-width:600px){.card{padding:20px}.question{font-size:18px}.certificate{padding:25px}}
 </style>
 </head>
 <body>
-<div class="app">
+<header>
+<h1>🧠 Free IQ Test</h1>
+<p>15 challenging questions • 10-minute time limit • Logic • Patterns • Mathematics • Reasoning</p>
+</header>
 
-<div class="header">
-<h1>🧠 IQ Challenge</h1>
-<p>Advanced Logic • Patterns • Mathematics • Reasoning</p>
-</div>
-
-<div class="content">
-
-<section id="start" class="center">
-<h2>Can you beat the leaderboard?</h2>
-<p class="intro">15 challenging questions • 8-minute time limit • one attempt per quiz session.</p>
-<input id="name" maxlength="60" placeholder="Enter participant name">
-<button onclick="startQuiz()">Start Challenge</button>
-<p class="note">The IQ number shown after the quiz is an unofficial score estimate based on this quiz. It is not a standardized or clinical IQ test.</p>
+<main class="container">
+<section id="startCard" class="card">
+<h2>Take the IQ Challenge</h2>
+<p>Enter your name, then try all 15 questions before the timer reaches zero.</p>
+<input id="nameInput" type="text" maxlength="50" placeholder="Enter participant name">
+<button onclick="startQuiz()">Start 10-Minute Challenge</button>
+<p class="small"><strong>Important:</strong> This is an IQ-style puzzle quiz, not a standardized or clinical IQ assessment. The displayed IQ-style estimate is only a fun score conversion for this website.</p>
 </section>
 
-<section id="quiz" class="hidden">
-<div class="top"><span id="counter"></span><span class="timer">⏱ <span id="time">08:00</span></span></div>
-<div class="bar"><div id="progress" class="progress"></div></div>
-<div id="question" class="question"></div>
-<div id="answers" class="answers"></div>
-<div class="controls"><button id="next" onclick="next()" disabled>Next</button></div>
+<section id="quizCard" class="card hidden">
+<div class="topbar"><span id="qCount">Question 1 of 15</span><span class="timer" id="timer">10:00</span></div>
+<div class="progress"><div id="progress"></div></div>
+<div id="questionBox"></div>
+<br>
+<button id="nextBtn" onclick="nextQuestion()">Next Question</button>
 </section>
 
-<section id="result" class="hidden center">
-<h2>Challenge Complete</h2>
-<p id="welcome"></p>
-
+<section id="resultCard" class="card hidden">
+<h2>🎉 Challenge Complete</h2>
 <div class="result-grid">
-<div class="card"><div>Quiz Score</div><div id="score" class="big"></div></div>
-<div class="card"><div>IQ-Style Estimate</div><div id="iq" class="big"></div></div>
+<div class="stat">Score<strong id="scoreOut">0/15</strong></div>
+<div class="stat">IQ-Style Estimate<strong id="iqOut">—</strong></div>
+<div class="stat">Category<strong id="categoryOut">—</strong></div>
 </div>
+<p id="descriptionOut"></p>
+<p><strong>Your Rank:</strong> <span id="rankOut">—</span></p>
+<div id="certificate"></div>
+<br>
+<button onclick="downloadCertificate()">Download E-Certificate</button>
+<button class="secondary" onclick="window.print()">Print / Save PDF</button>
+<button class="secondary" onclick="location.reload()">Try Again</button>
+</section>
 
-<div id="category" class="category"></div>
-<p id="description"></p>
-<p id="rankText"></p>
-
-<div class="rankbox">
+<section class="card">
 <h2>🏆 Leaderboard</h2>
 <div id="leaderboard"></div>
-</div>
-
-<button onclick="downloadCertificate()">Download E-Certificate</button>
-<button class="secondary" onclick="printCertificate()">Print / Save PDF</button>
-<button class="gray" onclick="restart()">Try Again</button>
-<p class="note">Leaderboard data is stored locally in this browser. To create a shared leaderboard for all participants, the site needs a database/server.</p>
+<p class="small">Leaderboard scores are stored locally in this browser. A shared leaderboard for everyone would require a database/server.</p>
 </section>
 
-</div>
-</div>
+<section class="card">
+<h2>About This IQ-Style Test</h2>
+<p>This free quiz contains 15 logic, pattern, mathematics and reasoning questions and gives you 10 minutes to complete them. Your result includes a quiz score, an IQ-style estimate, a category and an optional e-certificate.</p>
+<h3>How is the score calculated?</h3>
+<p>The IQ-style estimate is a simple conversion of your quiz score for entertainment and comparison on this site. It is <strong>not</strong> equivalent to a professionally administered IQ test.</p>
+</section>
+</main>
+
+<footer>© 2026 Free IQ Test • Built as an educational puzzle challenge</footer>
 
 <script>
-const questions=[
-["What number comes next? 3, 6, 12, 24, 48, ?",["72","84","96","108"],2],
-["Find the missing number: 2, 6, 12, 20, 30, ?",["36","40","42","44"],2],
-["A clock gains 5 minutes every hour. If it is set correctly at 12:00 noon, what will it show at 6:00 PM?",["6:20 PM","6:25 PM","6:30 PM","6:35 PM"],1],
-["If CODE is written as 31545 using A=1, B=2, etc., how would LOGIC be written?",["1215973","1217913","1211593","1219713"],0],
-["A, B, C and D sit in a row. A is not next to B. C is at one end. D sits next to C. Which arrangement is possible?",["A B C D","B A C D","A D C B","C D A B"],3],
-["What is the next number? 1, 4, 9, 16, 25, 36, ?",["42","45","49","52"],2],
-["If 4 workers complete a task in 12 days at the same rate, how many days would 6 workers need?",["6","8","9","10"],1],
-["Which number replaces the question mark? 8 : 64 :: 11 : ?",["111","121","132","144"],1],
-["A cube has all its faces painted and is cut into 27 equal smaller cubes. How many small cubes have paint on exactly two faces?",["8","12","16","20"],1],
-["If some Zips are Zaps and all Zaps are Zops, which statement must be true?",["All Zips are Zops","Some Zips are Zops","No Zips are Zops","All Zops are Zips"],1],
-["A sequence follows a rule: 2, 5, 11, 23, 47, ?. What is next?",["71","83","95","97"],2],
-["A father is 4 times as old as his son. In 12 years, he will be twice as old. How old is the son now?",["4","6","8","10"],1],
-["Which fraction is largest?",["7/12","5/8","11/18","13/20"],3],
-["If TODAY is coded as UPEBZ, how is NIGHT coded using the same rule?",["OJHIU","OJHIU","OJHIS","OJHUV"],0],
-["There are 5 boxes. Only one contains a prize. You may ask one yes/no question to one person who always lies. What type of question lets you identify the prize box?",["Ask which box has the prize","Ask which box does not have the prize","Ask which box another person would say contains the prize","No question can identify it"],2]
+const questions = [
+{q:"What number comes next? 3, 6, 12, 24, 48, ?",o:["72","84","96","108"],a:2},
+{q:"What number comes next? 2, 6, 12, 20, 30, ?",o:["36","40","42","44"],a:2},
+{q:"A clock gains 5 minutes every hour. It is correct at 12:00 noon. What will it show at 6:00 PM?",o:["6:20 PM","6:25 PM","6:30 PM","6:35 PM"],a:1},
+{q:"If A=1, B=2, ... Z=26, how should LOGIC be written as a number string?",o:["1215793","1215973","12157913","12159713"],a:0},
+{q:"Four people A, B, C and D sit in a row. A sits immediately before B. C sits at the left end. Which arrangement is possible?",o:["A B C D","C A B D","B A C D","D C A B"],a:1},
+{q:"What number comes next? 1, 4, 9, 16, 25, 36, ?",o:["42","45","49","54"],a:2},
+{q:"If 4 workers complete a job in 12 days at the same rate, how many days would 6 workers need?",o:["6","8","9","10"],a:1},
+{q:"8 is to 64 as 11 is to ?",o:["99","110","121","132"],a:2},
+{q:"A cube is painted on all six faces and cut into 27 equal small cubes. How many small cubes have exactly two painted faces?",o:["8","12","16","20"],a:1},
+{q:"All Zaps are Zops. Some Zips are Zaps. Which statement must be true?",o:["All Zips are Zops","Some Zips are Zops","No Zips are Zops","Some Zops are not Zips"],a:1},
+{q:"What number comes next? 2, 5, 11, 23, 47, ?",o:["71","94","95","96"],a:2},
+{q:"A father is 4 times as old as his son. In 12 years, the father will be twice as old as his son. How old is the son now?",o:["4","6","8","10"],a:1},
+{q:"Which fraction is largest?",o:["7/12","5/8","11/18","13/20"],a:3},
+{q:"Each letter is replaced by the next letter of the alphabet. TODAY becomes UPEBZ. What does NIGHT become?",o:["OJHIU","OJGHU","OHJTU","OJHIT"],a:0},
+{q:"A prize is hidden in one of five boxes. A person always lies. You may ask one yes/no question about a specific box. Which question lets you determine whether that specific box contains the prize?",o:["Is the prize in this box?","Would you say the prize is in this box if you were telling the truth?","Is the prize not in this box?","Does another person think the prize is in this box?"],a:1}
 ];
 
-let i=0,score=0,choice=null,time=600,timer=null,participant="",certificateId="",lastIQ=0,lastCategory="";
+let current=0,score=0,timerId=null,seconds=600,participant="";
+const $=id=>document.getElementById(id);
 
 function startQuiz(){
- participant=document.getElementById("name").value.trim();
- if(!participant){alert("Please enter the participant name.");return}
- i=0;score=0;time=600;certificateId="IQ-"+Math.random().toString(36).slice(2,8).toUpperCase();
- document.getElementById("start").classList.add("hidden");
- document.getElementById("result").classList.add("hidden");
- document.getElementById("quiz").classList.remove("hidden");
- clearInterval(timer);timer=setInterval(tick,1000);show();
+ participant=$("nameInput").value.trim();
+ if(!participant){alert("Please enter your name.");return;}
+ $("startCard").classList.add("hidden"); $("quizCard").classList.remove("hidden");
+ current=0;score=0;seconds=600; renderQuestion(); updateTimer();
+ timerId=setInterval(()=>{seconds--;updateTimer();if(seconds<=0)finishQuiz();},1000);
 }
-function tick(){
- time--;
- let m=Math.floor(time/60),s=time%60;
- document.getElementById("time").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
- if(time<=0)finish();
+function updateTimer(){ $("timer").textContent=`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,"0")}`; }
+function renderQuestion(){
+ const x=questions[current];
+ $("qCount").textContent=`Question ${current+1} of ${questions.length}`;
+ $("progress").style.width=((current)/questions.length*100)+"%";
+ $("questionBox").innerHTML=`<div class="question">${x.q}</div><div>${x.o.map((v,i)=>`<label class="option"><input type="radio" name="answer" value="${i}"> ${v}</label>`).join("")}</div>`;
+ $("nextBtn").textContent=current===questions.length-1?"Finish Quiz":"Next Question";
 }
-function show(){
- choice=null;let q=questions[i];
- document.getElementById("counter").textContent=`Question ${i+1} of ${questions.length}`;
- document.getElementById("progress").style.width=((i+1)/questions.length*100)+"%";
- document.getElementById("question").textContent=q[0];
- let box=document.getElementById("answers");box.innerHTML="";
- q[1].forEach((a,n)=>{
-  let b=document.createElement("button");b.className="answer";b.textContent=a;
-  b.onclick=()=>select(n,b);box.appendChild(b);
- });
- document.getElementById("next").disabled=true;
- document.getElementById("next").textContent=i===questions.length-1?"Finish":"Next";
+function nextQuestion(){
+ const picked=document.querySelector('input[name="answer"]:checked');
+ if(!picked){alert("Please select an answer.");return;}
+ if(Number(picked.value)===questions[current].a)score++;
+ current++;
+ if(current>=questions.length)finishQuiz(); else renderQuestion();
 }
-function select(n,b){
- choice=n;document.querySelectorAll(".answer").forEach(x=>x.classList.remove("selected"));
- b.classList.add("selected");document.getElementById("next").disabled=false;
-}
-function next(){
- if(choice===null)return;
- if(choice===questions[i][2])score++;
- i++;i<questions.length?show():finish();
-}
-function calculateIQ(){
- // Unofficial quiz estimate: centered around 100, scaled by percentage.
- return Math.round(70+(score/questions.length)*60);
-}
-function categoryFor(iq){
- if(iq>=125)return ["Exceptional","Very strong performance on this quiz."];
- if(iq>=115)return ["Highly Intelligent","Excellent reasoning performance."];
- if(iq>=105)return ["Very Smart","Strong performance across the challenge."];
- if(iq>=95)return ["Smart","Solid reasoning performance."];
- if(iq>=85)return ["Above Average","A good foundation in logical reasoning."];
- if(iq>=75)return ["Developing","Keep practicing patterns and reasoning."];
- return ["Beginner","This is a starting point—practice can improve your reasoning skills."];
-}
-function finish(){
- clearInterval(timer);
- lastIQ=calculateIQ();
- let cat=categoryFor(lastIQ);lastCategory=cat[0];
- saveResult();
- document.getElementById("quiz").classList.add("hidden");
- document.getElementById("result").classList.remove("hidden");
- document.getElementById("welcome").textContent=`Well done, ${participant}!`;
- document.getElementById("score").textContent=`${score}/${questions.length}`;
- document.getElementById("iq").textContent=lastIQ;
- document.getElementById("category").textContent=cat[0];
- document.getElementById("description").textContent=cat[1];
+function finishQuiz(){
+ if(timerId){clearInterval(timerId);timerId=null;}
+ const iq=Math.round(70+(score/questions.length)*60);
+ let category,desc;
+ if(iq>=125){category="Exceptional";desc="Outstanding performance on this quiz."}
+ else if(iq>=115){category="Highly Intelligent";desc="Excellent performance on this quiz."}
+ else if(iq>=105){category="Very Smart";desc="Very strong performance on this quiz."}
+ else if(iq>=95){category="Smart";desc="Strong performance on this quiz."}
+ else if(iq>=85){category="Above Average";desc="A solid performance on this quiz."}
+ else if(iq>=75){category="Developing";desc="Keep practicing logic and reasoning puzzles."}
+ else {category="Beginner";desc="Keep practicing and try again."}
+ const record={name:participant,score,iq,date:new Date().toLocaleDateString()};
+ let board=JSON.parse(localStorage.getItem("iqBoard")||"[]");
+ board.push(record);board.sort((a,b)=>b.score-a.score||b.iq-a.iq);
+ board=board.slice(0,20);localStorage.setItem("iqBoard",JSON.stringify(board));
+ const rank=board.findIndex(x=>x.name===participant&&x.score===score&&x.iq===iq)+1;
+ $("quizCard").classList.add("hidden");$("resultCard").classList.remove("hidden");
+ $("scoreOut").textContent=`${score}/${questions.length}`;$("iqOut").textContent=iq;
+ $("categoryOut").textContent=category;$("descriptionOut").textContent=desc;$("rankOut").textContent=rank?`#${rank}`:"—";
+ const id="IQ-"+Date.now().toString(36).toUpperCase();
+ $("certificate").innerHTML=`<div class="certificate" id="certificatePrint"><div class="small">CERTIFICATE OF ACHIEVEMENT</div><h2>IQ CHALLENGE</h2><div>This certificate is proudly presented to</div><div class="name">${escapeHtml(participant)}</div><div>for completing the 15-question IQ-style challenge</div><p><strong>Score:</strong> ${score}/15 &nbsp; | &nbsp; <strong>IQ-style estimate:</strong> ${iq}</p><p><span class="badge">${category}</span></p><p>${new Date().toLocaleDateString()} • Certificate ID: ${id}</p><p class="small">Unofficial quiz estimate; not a standardized or clinical IQ score.</p></div>`;
  renderLeaderboard();
 }
-function getBoard(){return JSON.parse(localStorage.getItem("iqLeaderboard")||"[]")}
-function saveResult(){
- let board=getBoard();
- board.push({name:participant,score:score,iq:lastIQ,id:certificateId,date:new Date().toLocaleDateString()});
- board.sort((a,b)=>b.score-a.score||b.iq-a.iq);
- localStorage.setItem("iqLeaderboard",JSON.stringify(board.slice(0,20)));
-}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
 function renderLeaderboard(){
- let board=getBoard(),html="<table><tr><th>Rank</th><th>Participant</th><th>Score</th><th>IQ*</th></tr>";
- board.forEach((r,n)=>{html+=`<tr><td>${n+1}</td><td>${safe(r.name)}</td><td>${r.score}/15</td><td>${r.iq}</td></tr>`});
- html+="</table>";
- document.getElementById("leaderboard").innerHTML=html;
- let pos=board.findIndex(x=>x.id===certificateId)+1;
- document.getElementById("rankText").textContent=pos?`Your current leaderboard position: #${pos}`:"";
-}
-function safe(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
-function certificate(){
- let date=new Date().toLocaleDateString();
- return `<!doctype html><html><head><meta charset="utf-8"><title>IQ Challenge Certificate</title>
-<style>@page{size:A4 landscape;margin:0}body{margin:0;background:#eee;font-family:Georgia,serif}.cert{width:1120px;height:790px;margin:25px auto;background:white;border:14px solid #312e81;padding:40px;text-align:center;box-sizing:border-box}.inner{height:100%;border:3px solid #c7d2fe;padding:50px;box-sizing:border-box}.small{letter-spacing:5px;color:#4338ca;font-size:18px}h1{font-size:52px;color:#1e1b4b;margin:18px}.name{font-size:42px;font-weight:bold;color:#312e81;margin:20px}.text{font-size:19px;line-height:1.5}.score{font-size:28px;color:#4338ca;font-weight:bold;margin:18px}.foot{margin-top:30px;font:14px Arial;color:#6b7280;display:flex;justify-content:space-between}</style></head>
-<body><div class="cert"><div class="inner"><div class="small">CERTIFICATE OF PARTICIPATION</div><h1>IQ CHALLENGE</h1><div class="text">This certificate is proudly presented to</div><div class="name">${safe(participant)}</div><div class="text">for successfully completing the 15-question IQ Reasoning Challenge.</div><div class="score">Score: ${score}/15 &nbsp; • &nbsp; IQ-style estimate: ${lastIQ} &nbsp; • &nbsp; Category: ${lastCategory}</div><div class="text">Date: ${date}</div><div class="foot"><span>Certificate ID: ${certificateId}</span><span>IQ Challenge Organizer</span></div></div></div></body></html>`;
+ const b=JSON.parse(localStorage.getItem("iqBoard")||"[]");
+ if(!b.length){$("leaderboard").innerHTML="<p>No scores yet. Be the first!</p>";return;}
+ $("leaderboard").innerHTML=`<table><thead><tr><th>Rank</th><th>Name</th><th>Score</th><th>IQ-style</th></tr></thead><tbody>${b.map((x,i)=>`<tr><td>#${i+1}</td><td>${escapeHtml(x.name)}</td><td>${x.score}/15</td><td>${x.iq}</td></tr>`).join("")}</tbody></table>`;
 }
 function downloadCertificate(){
- let blob=new Blob([certificate()],{type:"text/html"}),url=URL.createObjectURL(blob),a=document.createElement("a");
- a.href=url;a.download=participant.replace(/[^a-z0-9]/gi,"_")+"_IQ_Certificate.html";a.click();URL.revokeObjectURL(url);
+ const c=$("certificatePrint").outerHTML;
+ const w=window.open("","_blank");
+ w.document.write(`<html><head><title>IQ Challenge Certificate</title><style>body{font-family:Arial;padding:40px}.certificate{border:10px double #6d28d9;padding:45px;text-align:center}.certificate h2{font-size:38px;color:#5b21b6}.name{font-size:30px;font-weight:bold;margin:22px}</style></head><body>${c}</body></html>`);
+ w.document.close();w.print();
 }
-function printCertificate(){
- let w=window.open("","_blank");w.document.write(certificate());w.document.close();w.focus();setTimeout(()=>w.print(),500);
-}
-function restart(){
- document.getElementById("result").classList.add("hidden");
- document.getElementById("start").classList.remove("hidden");
- document.getElementById("name").value=participant;
-}
+renderLeaderboard();
 </script>
 </body>
 </html>
