@@ -1,165 +1,810 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kids Brain Quest | Fun Brain Puzzles for Kids</title>
-<meta name="description" content="Play Kids Brain Quest: fun easy, medium and hard brain puzzles for kids. Earn a colourful certificate, celebrate your score and practise logic, patterns and numbers.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://priyanthd0712.github.io/IQ-Test/">
-<meta name="theme-color" content="#6d28d9">
-<meta property="og:title" content="Kids Brain Quest | Fun Brain Puzzles">
-<meta property="og:description" content="Play colourful brain puzzles, earn a certificate and keep learning!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://priyanthd0712.github.io/IQ-Test/">
-<style>
-:root{--purple:#6d28d9;--purple2:#8b5cf6;--ink:#242044;--muted:#625f7b;--bg:#f7f5ff;--card:#fff;--line:#e7e2fb;--green:#168454;--yellow:#fff1c9}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 8% 0,#e2f4ff 0,transparent 28%),radial-gradient(circle at 95% 4%,#ffe4f0 0,transparent 26%),var(--bg);color:var(--ink);line-height:1.55}
-.wrap{width:min(1000px,92%);margin:auto}header{padding:20px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:950;font-size:1.25rem;color:var(--purple)}.logo{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:#fff;box-shadow:0 5px 18px #3b22751a;font-size:1.7rem}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}nav button{padding:8px 12px;font-size:.9rem}.hero{text-align:center;padding:24px 0}.pill{display:inline-block;background:#eee8ff;color:#5b21b6;border-radius:999px;padding:6px 13px;font-size:.86rem;font-weight:850}h1{font-size:clamp(2.1rem,6vw,3.8rem);line-height:1.08;letter-spacing:-.04em;margin:15px 0}h2{margin:0 0 12px;font-size:1.55rem}.hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.08rem}.features{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:20px 0}.features span{background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-weight:750;font-size:.9rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,32px);box-shadow:0 14px 40px #39216b0b;margin:18px auto}.start-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}.mascot{background:linear-gradient(135deg,#e9ddff,#dff5ff);border-radius:22px;min-height:190px;display:grid;place-items:center;font-size:6rem;animation:bob 3s ease-in-out infinite}.muted{color:var(--muted)}label{display:block;font-weight:750;margin:14px 0 6px}input,select{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;background:#fff;color:var(--ink)}input:focus,select:focus{outline:3px solid #d9ccff;border-color:var(--purple)}
-button{border:0;border-radius:13px;padding:13px 18px;background:var(--purple);color:#fff;font:inherit;font-weight:850;cursor:pointer;transition:transform .15s,background .15s}button:hover{background:#5521b5;transform:translateY(-1px)}button:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}button.secondary{background:#eee8ff;color:#5521b5}button.secondary:hover{background:#dfd3ff}button:disabled{opacity:.45;cursor:not-allowed;transform:none}.full{width:100%;margin-top:14px}.notice{font-size:.9rem;background:#fff9e8;border:1px solid #f7e5a6;border-radius:14px;padding:12px 14px;color:#6c5310}
-.hidden{display:none!important}.quiz-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.timer{background:var(--yellow);color:#784b00;border-radius:12px;padding:8px 12px;font-weight:900}.progress{height:10px;background:#eeeafb;border-radius:99px;overflow:hidden;margin:12px 0 22px}.bar{height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#22c1c3);transition:width .25s}.question{font-size:clamp(1.25rem,3vw,1.65rem);font-weight:850;margin:8px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{background:#fff;color:var(--ink);border:2px solid var(--line);text-align:left;min-height:58px}.option:hover{background:#f6f1ff;border-color:#b8a2f6}.option.selected{border-color:var(--purple);background:#eee8ff;color:#4c1d95}.actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.result{text-align:center}.result-emoji{font-size:4.5rem;animation:pop .6s ease}.score{font-size:3rem;font-weight:950;color:var(--purple);line-height:1.1}.result-box{background:#f5f0ff;border-radius:18px;padding:18px;margin:18px 0}.certificate{border:6px double #8b5cf6;border-radius:20px;padding:clamp(18px,4vw,34px);margin:20px 0;background:radial-gradient(circle at top right,#fff1fa,transparent 40%),linear-gradient(135deg,#fff,#fcfaff);text-align:center;position:relative;overflow:hidden}.certificate:before,.certificate:after{content:"✦ ✧ ✦";position:absolute;color:#f0b429;font-size:1.5rem;letter-spacing:8px}.certificate:before{top:8px;left:12px}.certificate:after{bottom:8px;right:12px}.certificate h2{font-size:clamp(1.5rem,4vw,2rem);color:var(--purple)}.cert-name{font-size:clamp(1.4rem,4vw,2rem);font-weight:950;color:#4c1d95;margin:8px 0;overflow-wrap:anywhere}.cert-seal{font-size:2.4rem}.leaderboard-list{padding-left:0;list-style:none;margin:0}.leaderboard-list li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-bottom:1px solid var(--line)}.leaderboard-list li:nth-child(1){background:#fff8d9;border-radius:10px}.leaderboard-list li:last-child{border-bottom:0}.tag{display:inline-block;background:#e7fff2;color:#126b45;border-radius:999px;padding:3px 9px;font-size:.82rem;font-weight:800}.confetti{position:fixed;top:-20px;z-index:99;pointer-events:none;font-size:20px;animation:fall 2.7s linear forwards}@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}@keyframes pop{0%{transform:scale(.5);opacity:.2}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}footer{text-align:center;color:var(--muted);font-size:.88rem;padding:22px 0 35px}
-@media(max-width:680px){.start-grid{grid-template-columns:1fr}.mascot{min-height:120px;font-size:4.5rem}.options{grid-template-columns:1fr}.actions button{flex:1}.hero{padding-top:12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}@media print{body{background:#fff}.no-print,header,.hero,footer,#startCard,#quizCard,#leaderboardCard,#levelsCard{display:none!important}#resultCard{display:block!important;box-shadow:none;border:0}.certificate{margin:0;min-height:85vh;display:flex;flex-direction:column;justify-content:center}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kids Brain Quest – Free Brain Games and Logic Puzzles</title>
+
+  <meta name="description" content="Play free brain games for kids with fun logic puzzles, number patterns, math challenges and reasoning questions. Choose Easy, Medium or Hard and challenge your thinking!">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6d28d9">
+
+  <link rel="canonical" href="https://priyanthd0712.github.io/IQ-Test/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kids Brain Quest – Free Brain Games">
+  <meta property="og:description" content="Enjoy fun brain teasers, logic puzzles and reasoning challenges for kids. Play for free!">
+  <meta property="og:url" content="https://priyanthd0712.github.io/IQ-Test/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kids Brain Quest">
+  <meta name="twitter:description" content="Free brain games, number patterns and logic puzzles for kids.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kids Brain Quest",
+    "url": "https://priyanthd0712.github.io/IQ-Test/",
+    "description": "A free educational puzzle quiz for kids featuring logic puzzles, number patterns and reasoning challenges.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "inLanguage": "en"
+  }
+  </script>
+
+  <style>
+    :root {
+      --purple: #6d28d9;
+      --purple-dark: #4c1d95;
+      --pink: #ec4899;
+      --blue: #2563eb;
+      --green: #15803d;
+      --bg: #f5f3ff;
+      --text: #211b35;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 30px 16px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #6d28d9, #9333ea, #ec4899);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.3rem);
+    }
+
+    header p {
+      margin: 10px auto 0;
+      max-width: 650px;
+    }
+
+    .mascot {
+      font-size: 65px;
+      margin-bottom: 4px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 25px auto;
+      padding: 0 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 22px #34206412;
+    }
+
+    h2, h3 {
+      line-height: 1.3;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .level {
+      border: 2px solid #e9d5ff;
+      background: white;
+      border-radius: 15px;
+      padding: 16px 8px;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .level.selected {
+      border-color: var(--purple);
+      background: #f3e8ff;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .primary, .secondary {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .primary {
+      color: white;
+      background: var(--purple);
+    }
+
+    .primary:hover {
+      background: var(--purple-dark);
+    }
+
+    .secondary {
+      color: var(--purple-dark);
+      background: #ede9fe;
+    }
+
+    button:focus-visible, input:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 3px;
+    }
+
+    button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+
+    .full {
+      width: 100%;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .pill {
+      background: #f3e8ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    .progress {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 99px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #7c3aed, #ec4899);
+      transition: width .2s;
+    }
+
+    .question {
+      font-size: 1.35rem;
+      font-weight: bold;
+      margin: 22px 0;
+    }
+
+    .answers {
+      display: grid;
+      gap: 11px;
+    }
+
+    .answer {
+      text-align: left;
+      padding: 14px;
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .answer:hover {
+      border-color: var(--purple);
+      background: #faf5ff;
+    }
+
+    .answer.chosen {
+      border-color: var(--purple);
+      background: #ede9fe;
+    }
+
+    .answer:disabled {
+      opacity: 1;
+      color: var(--text);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd6fe;
+      border-radius: 10px;
+      font: inherit;
+      margin: 8px 0 14px;
+    }
+
+    .result-score {
+      font-size: 3rem;
+      color: var(--purple);
+      font-weight: bold;
+    }
+
+    .certificate {
+      border: 8px double #7c3aed;
+      padding: 28px 16px;
+      text-align: center;
+      background: #fffcf5;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .certificate h2 {
+      color: var(--purple-dark);
+      font-size: 1.8rem;
+    }
+
+    .certificate-name {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #7c3aed;
+      overflow-wrap: anywhere;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 7px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 14px;
+      color: #5b536b;
+      font-size: .9rem;
+    }
+
+    footer a {
+      color: var(--purple-dark);
+    }
+
+    @media (max-width: 520px) {
+      .levels {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .question {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      #certificate, #certificate * {
+        visibility: visible;
+      }
+
+      #certificate {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="wrap">
-  <div class="brand"><div class="logo" aria-hidden="true">🧠</div><span>Kids Brain Quest</span></div>
-  <nav class="no-print" aria-label="Main navigation">
-    <button class="secondary" type="button" onclick="showSection('startCard')">🏠 Play</button>
-    <button class="secondary" type="button" onclick="showSection('levelsCard')">🎮 Levels</button>
-    <button class="secondary" type="button" onclick="showSection('leaderboardCard')">🏆 Leaderboard</button>
-  </nav>
+<header>
+  <div class="mascot" aria-hidden="true">🧠🌟</div>
+  <h1>Kids Brain Quest</h1>
+  <p>Think, explore, solve and shine! Play free brain games and fun logic puzzles.</p>
 </header>
-<main class="wrap">
-<section class="hero">
-  <span class="pill">✨ THINK • PLAY • LEARN</span>
-  <h1>A big adventure<br>for your <span style="color:var(--purple)">bright brain!</span></h1>
-  <p>Explore puzzles about patterns, numbers, shapes and logic. Pick a level, think carefully and celebrate what you learn!</p>
-  <div class="features"><span>🧩 15 puzzles per level</span><span>⏱️ 10 minutes</span><span>🏅 Printable certificate</span><span>🌈 Made for kids</span></div>
-</section>
 
-<section class="card" id="startCard">
-  <div class="start-grid"><div>
-    <h2>Ready, puzzle explorer? 🚀</h2>
-    <p class="muted">Choose a nickname and a level. No account or email needed.</p>
-    <label for="playerName">Your nickname</label><input id="playerName" type="text" maxlength="24" placeholder="e.g. Puzzle Star" autocomplete="nickname">
-    <label for="levelSelect">Choose your challenge</label>
-    <select id="levelSelect"><option value="easy">🌱 Easy Explorer</option><option value="medium" selected>🚀 Medium Thinker</option><option value="hard">🧠 Hard Brain Boss</option></select>
-    <button class="full" id="startBtn">Start my brain adventure →</button>
-    <p class="muted" style="font-size:.85rem">You can skip tricky questions and return to them before finishing.</p>
-  </div><div class="mascot" aria-label="Friendly brain mascot">🧠✨</div></div>
-  <div class="notice" style="margin-top:18px"><strong>Friendly reminder:</strong> This is a just-for-fun puzzle game, not a real IQ test. Your score does not measure your worth, intelligence or future potential.</div>
-</section>
+<main class="container">
+  <section id="welcome" class="card center">
+    <h2>Welcome, Brain Explorer! 🚀</h2>
+    <p>
+      Challenge yourself with number patterns, maths, logic and reasoning.
+      Choose a level and see how many questions you can solve!
+    </p>
 
-<section class="card hidden" id="levelsCard">
-  <h2>🎮 Pick your level</h2><p class="muted">Each level has 15 questions and a 10-minute timer. You can replay any level!</p>
-  <div class="options">
-    <button class="option" onclick="chooseLevel('easy')">🌱 Easy Explorer<br><small>Simple numbers, shapes and everyday logic</small></button>
-    <button class="option" onclick="chooseLevel('medium')">🚀 Medium Thinker<br><small>Patterns, arithmetic and reasoning</small></button>
-    <button class="option" onclick="chooseLevel('hard')">🧠 Hard Brain Boss<br><small>Multi-step patterns and trickier logic</small></button>
-  </div>
-  <button class="full" onclick="showSection('startCard')">Back to play</button>
-</section>
+    <label for="playerName"><strong>Your nickname</strong></label>
+    <input id="playerName" maxlength="30" placeholder="Enter your nickname" autocomplete="nickname">
 
-<section class="card hidden" id="quizCard" aria-live="polite">
-  <div class="quiz-head"><strong id="questionCount">Puzzle 1 of 15</strong><span class="tag" id="levelBadge">Medium Thinker</span><div class="timer" id="timer" role="timer">⏱️ 10:00</div></div>
-  <div class="progress" aria-label="Quiz progress"><div class="bar" id="progressBar"></div></div>
-  <div class="question" id="questionText"></div><div class="options" id="options"></div>
-  <div class="actions"><button class="secondary" id="backBtn">← Back</button><button id="nextBtn">Next puzzle →</button></div>
-  <p class="muted" style="font-size:.85rem;margin-bottom:0">Tip: do your best. Learning is more important than a score!</p>
-</section>
+    <h3>Choose your challenge</h3>
 
-<section class="card hidden" id="resultCard" aria-live="polite">
-  <div class="result"><div class="result-emoji" id="resultEmoji">🎉</div><h2 id="resultTitle">Amazing effort!</h2><p class="muted" id="resultMessage"></p>
-    <div class="result-box"><div class="muted">Your puzzle score</div><div class="score" id="scoreText">0 / 15</div><strong id="categoryText">Puzzle Explorer</strong><p id="percentText" class="muted"></p></div>
-    <p class="muted">Every brain grows by learning and practising. This score is only for this game!</p>
-  </div>
-  <div class="certificate" id="certificate"><div class="cert-seal">🏆 🌟 🏆</div><h2>Certificate of Puzzle Achievement</h2><p>This certificate is proudly presented to</p><div class="cert-name" id="certificateName">Puzzle Star</div><p>for completing the <strong>Kids Brain Quest</strong> challenge.</p><h2 id="certificateScore">Puzzle score: 0 / 15</h2><p id="certificateLevel">Level: Medium Thinker</p><p id="certificateDate"></p><p><strong>Certificate No.:</strong> <span id="certificateId"></span></p><p style="color:#6d28d9;font-weight:850">Keep being curious. Keep learning!</p></div>
-  <div class="actions no-print"><button class="secondary" id="printBtn">🖨️ Print certificate</button><button id="restartBtn">Play again ↻</button></div>
-  <p class="notice">This certificate celebrates completing a game. It is not an official qualification or a scientific IQ result.</p>
-</section>
+    <div class="levels">
+      <button class="level selected" data-level="Easy" aria-pressed="true">
+        🌱 Easy
+      </button>
+      <button class="level" data-level="Medium" aria-pressed="false">
+        🚀 Medium
+      </button>
+      <button class="level" data-level="Hard" aria-pressed="false">
+        🔥 Hard
+      </button>
+    </div>
 
-<section class="card hidden" id="leaderboardCard">
-  <h2>🏆 This browser's leaderboard</h2><p class="muted">Scores are saved on this device/browser only. They are not sent to a server and will not automatically appear on other people's devices.</p>
-  <ol class="leaderboard-list" id="leaderboardList"><li>No scores yet. Play a round to get started!</li></ol>
-  <div class="actions"><button class="secondary" onclick="showSection('startCard')">← Back to play</button><button class="secondary" id="clearScoresBtn">Clear saved scores</button></div>
-  <p class="muted" style="font-size:.85rem">For a shared online leaderboard, this site would need a secure database or leaderboard service.</p>
-</section>
+    <p>⏱️ 10 minutes · 15 questions · Printable certificate</p>
+    <button id="startBtn" class="primary full">Start My Quest!</button>
+  </section>
+
+  <section id="quiz" class="card hidden" aria-live="polite">
+    <div class="stats">
+      <span class="pill" id="questionCount">Question 1 of 15</span>
+      <span class="pill" id="timer" role="timer">⏱️ 10:00</span>
+      <span class="pill" id="scoreDisplay">⭐ Score: 0</span>
+    </div>
+
+    <div class="progress" aria-label="Quiz progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p id="levelLabel"></p>
+    <div class="question" id="questionText"></div>
+    <div class="answers" id="answers"></div>
+    <p id="feedback" aria-live="polite"></p>
+
+    <button id="nextBtn" class="primary full" disabled>Next Question →</button>
+    <p class="center"><button id="quitBtn" class="secondary">Quit Quiz</button></p>
+  </section>
+
+  <section id="result" class="card center hidden" aria-live="polite">
+    <div style="font-size:60px" aria-hidden="true">🎉</div>
+    <h2 id="resultTitle">Quest Complete!</h2>
+    <p class="result-score" id="finalScore">0/15</p>
+    <h3 id="resultCategory"></h3>
+    <p id="resultMessage"></p>
+    <p id="resultTime"></p>
+
+    <div id="certificate" class="certificate">
+      <div style="font-size:44px">🏆 🌟 🏆</div>
+      <h2>Certificate of Achievement</h2>
+      <p>This certificate is proudly presented to</p>
+      <div id="certificateName" class="certificate-name">Brain Explorer</div>
+      <p>for completing the Kids Brain Quest challenge!</p>
+      <p><strong>Level:</strong> <span id="certificateLevel"></span></p>
+      <p><strong>Score:</strong> <span id="certificateScore"></span></p>
+      <p><strong>Date:</strong> <span id="certificateDate"></span></p>
+      <p><small>Certificate ID: <span id="certificateId"></span></small></p>
+      <p><em>Keep learning, thinking and exploring!</em></p>
+    </div>
+
+    <div class="no-print" style="margin-top:20px">
+      <button class="primary" id="printBtn">🖨️ Print Certificate</button>
+      <button class="secondary" id="againBtn">Play Again</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🏆 Top Scores on This Device</h2>
+    <p>
+      Your local leaderboard stores scores in this browser only.
+      It is not a shared online ranking.
+    </p>
+    <div id="leaderboard">
+      <p>No scores yet. Be the first to play!</p>
+    </div>
+    <button class="secondary" id="clearScoresBtn">Clear Local Scores</button>
+  </section>
+
+  <section class="card">
+    <h2>🧩 Fun Brain Games and Logic Puzzles for Kids</h2>
+    <p>
+      Welcome to Kids Brain Quest, a free online brain quiz for children.
+      Explore number patterns, simple maths, logical reasoning and fun
+      thinking challenges. Choose Easy, Medium or Hard and practise solving
+      problems one question at a time.
+    </p>
+    <h3>How to play</h3>
+    <ul>
+      <li>Choose a difficulty level that feels right for you.</li>
+      <li>Answer 15 multiple-choice questions before the timer runs out.</li>
+      <li>See your score and earn a printable completion certificate.</li>
+      <li>Try again and challenge yourself with another level.</li>
+    </ul>
+    <p>
+      Kids Brain Quest is an entertainment and learning activity.
+      Its scores are not a scientifically validated IQ measurement and
+      should not be used to assess a child's intelligence.
+    </p>
+  </section>
 </main>
-<footer class="wrap">Made for curious kids everywhere 💜 · Be kind to yourself and keep exploring!</footer>
+
+<footer>
+  <p>© <span id="year"></span> Kids Brain Quest · Learn through play! 🌈</p>
+  <p>Free educational puzzles for curious minds.</p>
+</footer>
+
 <script>
-(() => {
-const BANK = {
-easy:[
-["What number comes next? 2, 4, 6, 8, …",["9","10","11","12"],1],
-["Which one is different?",["🍎 Apple","🍌 Banana","🥕 Carrot","🍇 Grapes"],2],
-["A shape has 3 sides. What is it called?",["Circle","Square","Triangle","Rectangle"],2],
-["If today is Monday, what day is tomorrow?",["Sunday","Tuesday","Friday","Saturday"],1],
-["Which number is smallest?",["17","7","27","70"],1],
-["What comes next? 🔴 🔵 🔴 🔵 🔴 …",["🔴","🔵","🟢","🟡"],1],
-["Mia has 3 pencils and gets 2 more. How many?",["4","5","6","7"],1],
-["Which word rhymes with “cake”?",["Bike","Lake","Book","Cup"],1],
-["Three birds have 2 legs each. How many legs altogether?",["3","5","6","8"],2],
-["Which object can tell time?",["Pillow","Clock","Spoon","Shoe"],1],
-["What number is missing? 5, 10, 15, __, 25",["16","18","20","22"],2],
-["Which is usually heaviest?",["Feather","Paper clip","School bus","Leaf"],2],
-["Sam is taller than Lee. Lee is taller than Jo. Who is shortest?",["Sam","Lee","Jo","Cannot tell"],2],
-["How many corners does a rectangle have?",["2","3","4","6"],2],
-["There are 4 cookies. You eat 1. How many remain?",["1","2","3","4"],2]
-],
-medium:[
-["What comes next? 3, 6, 12, 24, …",["30","36","48","50"],2],
-["Which number does not belong?",["9","16","25","27"],3],
-["A book costs ₹40. You pay ₹100. How much change?",["₹40","₹50","₹60","₹70"],2],
-["Find the missing number: 2, 5, 8, 11, __",["12","13","14","15"],1],
-["All zibs are blue. This toy is a zib. What must be true?",["It is blue","It is red","It is round","It is tiny"],0],
-["Which shape has exactly one pair of parallel sides (in a usual school definition)?",["Square","Trapezoid","Circle","Triangle"],1],
-["If 4 notebooks cost ₹80, what do 2 cost at the same price each?",["₹20","₹30","₹40","₹60"],2],
-["Which letter comes next? A, C, E, G, …",["H","I","J","K"],1],
-["A clock shows 3:00. What angle is between the hands?",["45°","60°","90°","180°"],2],
-["Riya is older than Ana. Ana is older than Bo. Who is youngest?",["Riya","Ana","Bo","Cannot tell"],2],
-["What is half of 3/4?",["1/4","3/8","1/2","2/3"],1],
-["If yesterday was Thursday, what day is the day after tomorrow?",["Friday","Saturday","Sunday","Monday"],2],
-["Complete the pattern: 1, 4, 9, 16, __",["20","24","25","36"],2],
-["A farmer has 12 apples and puts 3 in each bag. How many bags?",["3","4","6","9"],1],
-["Which word is closest in meaning to “rapid”?",["Slow","Quick","Quiet","Careful"],1]
-],
-hard:[
-["What comes next? 2, 6, 12, 20, 30, …",["36","40","42","44"],2],
-["Find the missing number: 81, 27, 9, 3, __",["0","1","2","6"],1],
-["If all flims are glops and no glops are red, can a flim be red?",["Yes, always","No","Only sometimes","Not enough information"],1],
-["A number is doubled, then 6 is added to make 20. What was the number?",["5","6","7","8"],2],
-["Which comes next? 1, 1, 2, 3, 5, 8, …",["11","12","13","16"],2],
-["A rectangle's length is 8 and width is 3. What is its perimeter?",["11","22","24","48"],1],
-["If CAT becomes DBU (each letter moves forward one), DOG becomes…",["EPH","CNG","FQI","EOG"],0],
-["Three machines make 3 toys in 3 minutes. At the same rate, how long do 6 machines take to make 6 toys?",["3 minutes","6 minutes","9 minutes","18 minutes"],0],
-["Which number is the odd one out?",["14","21","28","32"],3],
-["A bag has 3 red and 2 blue balls. Without looking, what is the fewest balls you must take to guarantee 2 of the same colour?",["2","3","4","5"],1],
-["What is the next number? 100,  fin, 25, 12.5",["6.25","10","5","0"],0],
-["If 5 workers finish a job in 6 days at the same rate, how many worker-days is the job?",["11","25","30","35"],2],
-["A pattern repeats every 4 symbols: ⭐ 🔺 ❤️ ☀️ ⭐ 🔺 ❤️ … What is the 10th symbol?",["⭐","🔺","❤️","☀️"],1],
-["A train leaves at 2:45 and travels for 1 hour 35 minutes. When does it arrive?",["4:10","4:20","4:30","4:35"],1],
-["A number leaves remainder 2 when divided by 5. Which could it be?",["15","17","20","25"],1]
-]
+"use strict";
+
+const questionBanks = {
+  Easy: [
+    ["What number comes next? 2, 4, 6, 8, ?", ["9", "10", "11", "12"], 1],
+    ["Which shape has three sides?", ["Square", "Circle", "Triangle", "Rectangle"], 2],
+    ["What is 5 + 7?", ["10", "11", "12", "13"], 2],
+    ["Which one is different?", ["Apple", "Banana", "Carrot", "Mango"], 2],
+    ["What number comes next? 10, 20, 30, ?", ["35", "40", "45", "50"], 1],
+    ["How many days are in a week?", ["5", "6", "7", "8"], 2],
+    ["Which is the biggest number?", ["17", "71", "27", "37"], 1],
+    ["What is half of 20?", ["5", "10", "15", "20"], 1],
+    ["Which animal says 'meow'?", ["Dog", "Cat", "Cow", "Duck"], 1],
+    ["What is 9 - 4?", ["3", "4", "5", "6"], 2],
+    ["Complete the pattern: A, B, A, B, ?", ["A", "C", "D", "E"], 0],
+    ["How many legs do two spiders have altogether?", ["8", "12", "16", "18"], 2],
+    ["Which is a colour?", ["Happy", "Blue", "Fast", "Soft"], 1],
+    ["What comes after 99?", ["90", "100", "101", "109"], 1],
+    ["If you have 3 sweets and get 2 more, how many?", ["4", "5", "6", "7"], 1]
+  ],
+
+  Medium: [
+    ["What number comes next? 3, 6, 12, 24, ?", ["30", "36", "48", "60"], 2],
+    ["What is 15 × 4?", ["45", "50", "60", "65"], 2],
+    ["Which number does not belong?", ["9", "16", "25", "30"], 3],
+    ["Complete the pattern: 1, 4, 9, 16, ?", ["20", "24", "25", "36"], 2],
+    ["If all roses are flowers, are roses flowers?", ["Yes", "No", "Never", "Cannot be a flower"], 0],
+    ["What is 144 ÷ 12?", ["10", "11", "12", "14"], 2],
+    ["A clock shows 3:00. What angle is between the hands?", ["45°", "60°", "90°", "180°"], 2],
+    ["What comes next? 2, 5, 8, 11, ?", ["12", "13", "14", "15"], 2],
+    ["Which word is the opposite of 'ancient'?", ["Old", "Modern", "Historic", "Past"], 1],
+    ["If 4 pencils cost 20 coins, what do 2 cost?", ["5", "10", "15", "20"], 1],
+    ["How many sides do 3 triangles have altogether?", ["6", "8", "9", "12"], 2],
+    ["What is the smallest number?", ["0.8", "0.08", "0.18", "0.81"], 1],
+    ["Find the missing number: 7, 14, 21, ?, 35", ["24", "27", "28", "30"], 2],
+    ["A dozen eggs means how many eggs?", ["10", "11", "12", "24"], 2],
+    ["If today is Monday, what day is it in 10 days?", ["Wednesday", "Thursday", "Friday", "Saturday"], 1]
+  ],
+
+  Hard: [
+    ["What comes next? 1, 1, 2, 3, 5, 8, ?", ["11", "12", "13", "15"], 2],
+    ["What is 25% of 200?", ["25", "40", "50", "75"], 2],
+    ["All flims are glops. No glops are red. Can a flim be red?", ["Yes", "No", "Always", "Not enough information"], 1],
+    ["Find the next number: 2, 6, 12, 20, 30, ?", ["36", "40", "42", "44"], 2],
+    ["A number multiplied by 3 equals 54. What is the number?", ["16", "18", "21", "27"], 1],
+    ["Which fraction is greatest?", ["1/2", "2/3", "3/5", "5/8"], 1],
+    ["If 5 machines make 5 toys in 5 minutes, how long for 1 machine to make 1 toy?", ["1 minute", "5 minutes", "10 minutes", "25 minutes"], 1],
+    ["What is the perimeter of a square with side 7 cm?", ["14 cm", "21 cm", "28 cm", "49 cm"], 2],
+    ["Complete the pattern: 81, 27, 9, 3, ?", ["0", "1", "2", "6"], 1],
+    ["A bag has red and blue balls. How many draws guarantee two of the same colour?", ["1", "2", "3", "4"], 2],
+    ["What is 12 squared?", ["124", "132", "144", "156"], 2],
+    ["A rectangle is 8 cm long and 5 cm wide. What is its area?", ["13 cm²", "26 cm²", "40 cm²", "80 cm²"], 2],
+    ["If 3x = 27, what is x + 4?", ["9", "11", "13", "15"], 1],
+    ["A train leaves at 2:45 and travels for 1 hour 35 minutes. When does it arrive?", ["4:10", "4:20", "4:30", "4:35"], 1],
+    ["What comes next? 100, 50, 25, 12.5, ?", ["5", "6.25", "7.5", "10"], 1]
+  ]
 };
-const LEVELS={easy:"Easy Explorer",medium:"Medium Thinker",hard:"Hard Brain Boss"};
-let questions=[],answers=[],current=0,seconds=600,timerId=null,player="Puzzle Star",level="medium",finished=false;
-const $=id=>document.getElementById(id);
-window.showSection=id=>{["startCard","levelsCard","quizCard","resultCard","leaderboardCard"].forEach(x=>$(x).classList.toggle("hidden",x!==id));if(id==="leaderboardCard")renderLeaderboard();$(id).scrollIntoView({behavior:"smooth",block:"start"});};
-window.chooseLevel=l=>{$("levelSelect").value=l;showSection("startCard");};
-function start(){player=$("playerName").value.trim().slice(0,24)||"Puzzle Star";level=$("levelSelect").value;questions=BANK[level];answers=Array(questions.length).fill(null);current=0;seconds=600;finished=false;$("timer").style.background="var(--yellow)";showSection("quizCard");$("levelBadge").textContent=LEVELS[level];renderQuestion();updateTimer();clearInterval(timerId);timerId=setInterval(()=>{seconds--;updateTimer();if(seconds<=0)finish();},1000);}
-function updateTimer(){const m=Math.floor(Math.max(0,seconds)/60),s=Math.max(0,seconds)%60;$("timer").textContent=`⏱️ ${m}:${String(s).padStart(2,"0")}`;if(seconds<=60)$("timer").style.background="#ffe0e5";}
-function renderQuestion(){const item=questions[current];$("questionCount").textContent=`Puzzle ${current+1} of ${questions.length}`;$("questionText").textContent=item[0];$("progressBar").style.width=`${(current+1)/questions.length*100}%`;const holder=$("options");holder.replaceChildren();item[1].forEach((option,i)=>{const b=document.createElement("button");b.type="button";b.className="option"+(answers[current]===i?" selected":"");b.textContent=`${String.fromCharCode(65+i)}. ${option}`;b.setAttribute("aria-pressed",answers[current]===i?"true":"false");b.addEventListener("click",()=>{answers[current]=i;renderQuestion();});holder.appendChild(b);});$("backBtn").disabled=current===0;$("nextBtn").textContent=current===questions.length-1?"Finish challenge ✓":"Next puzzle →";}
-function finish(){if(finished)return;finished=true;clearInterval(timerId);const score=answers.reduce((sum,a,i)=>sum+(a===questions[i][2]?1:0),0);const percent=Math.round(score/questions.length*100);let category,emoji,message;if(score>=13){category="Super Puzzle Star";emoji="🌟";message="Fantastic work! You spotted lots of patterns and solved many puzzles."}else if(score>=10){category="Brilliant Brain Explorer";emoji="🚀";message="Great job! You used careful thinking to solve lots of challenges."}else if(score>=6){category="Curious Thinker";emoji="🧩";message="Nice effort! Keep practising and trying new kinds of puzzles."}else{category="Growing Puzzle Explorer";emoji="🌱";message="Well done for giving it a try! Every puzzle is a chance to learn something new."}
-$("scoreText").textContent=`${score} / ${questions.length}`;$("categoryText").textContent=category;$("percentText").textContent=`${percent}% correct · ${LEVELS[level]}`;$("resultEmoji").textContent=emoji;$("resultTitle").textContent=`Well done, ${player}!`;$("resultMessage").textContent=message;$("certificateName").textContent=player;$("certificateScore").textContent=`Puzzle score: ${score} / ${questions.length}`;$("certificateLevel").textContent=`Level: ${LEVELS[level]}`;$("certificateDate").textContent=`Completed on ${new Date().toLocaleDateString(undefined,{year:"numeric",month:"long",day:"numeric"})}`;const certId="BQ-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,6).toUpperCase();$("certificateId").textContent=certId;
-try{const list=JSON.parse(localStorage.getItem("kidsBrainQuestScores")||"[]");list.push({name:player,score,total:questions.length,level:LEVELS[level],date:new Date().toISOString(),id:certId});list.sort((a,b)=>b.score-a.score||a.date.localeCompare(b.date));localStorage.setItem("kidsBrainQuestScores",JSON.stringify(list.slice(0,50)));}catch(e){}
-showSection("resultCard");celebrate();renderLeaderboard();}
-function celebrate(){const symbols=["⭐","✨","🎉","💜","🌈"];for(let i=0;i<30;i++){const el=document.createElement("span");el.className="confetti";el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+"vw";el.style.animationDelay=Math.random()*.7+"s";el.style.fontSize=(14+Math.random()*16)+"px";document.body.appendChild(el);setTimeout(()=>el.remove(),3500);}}
-function renderLeaderboard(){let list=[];try{list=JSON.parse(localStorage.getItem("kidsBrainQuestScores")||"[]");}catch(e){}const ol=$("leaderboardList");ol.replaceChildren();if(!list.length){const li=document.createElement("li");li.textContent="No scores yet. Play a round to get started!";ol.appendChild(li);return;}list.slice(0,10).forEach((entry,i)=>{const li=document.createElement("li");const left=document.createElement("span");left.textContent=`${["🥇","🥈","🥉"][i]||`${i+1}.`} ${entry.name} · ${entry.level}`;const right=document.createElement("strong");right.textContent=`${entry.score}/${entry.total}`;li.append(left,right);ol.appendChild(li);});}
-$("startBtn").addEventListener("click",start);$("backBtn").addEventListener("click",()=>{if(current>0){current--;renderQuestion();}});$("nextBtn").addEventListener("click",()=>{if(current<questions.length-1){current++;renderQuestion();}else finish();});$("printBtn").addEventListener("click",()=>window.print());$("restartBtn").addEventListener("click",()=>{clearInterval(timerId);showSection("startCard");});$("clearScoresBtn").addEventListener("click",()=>{if(confirm("Clear all saved scores from this browser?")){localStorage.removeItem("kidsBrainQuestScores");renderLeaderboard();}});renderLeaderboard();
-})();
+
+const $ = id => document.getElementById(id);
+
+let selectedLevel = "Easy";
+let questions = [];
+let current = 0;
+let score = 0;
+let selectedAnswer = null;
+let secondsLeft = 600;
+let timerHandle = null;
+let quizEnded = false;
+let startedAt = 0;
+
+$("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll(".level").forEach(button => {
+  button.addEventListener("click", () => {
+    selectedLevel = button.dataset.level;
+    document.querySelectorAll(".level").forEach(item => {
+      const active = item === button;
+      item.classList.toggle("selected", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+  });
+});
+
+function showSection(id) {
+  ["welcome", "quiz", "result"].forEach(section => {
+    $(section).classList.toggle("hidden", section !== id);
+  });
+}
+
+function shuffle(items) {
+  const copy = [...items];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function startQuiz() {
+  clearInterval(timerHandle);
+  questions = shuffle(questionBanks[selectedLevel]);
+  current = 0;
+  score = 0;
+  secondsLeft = 600;
+  quizEnded = false;
+  startedAt = Date.now();
+
+  $("scoreDisplay").textContent = "⭐ Score: 0";
+  $("levelLabel").textContent = "Level: " + selectedLevel;
+  $("feedback").textContent = "";
+  showSection("quiz");
+  renderQuestion();
+  updateTimer();
+
+  timerHandle = setInterval(() => {
+    secondsLeft--;
+    updateTimer();
+
+    if (secondsLeft <= 0) {
+      finishQuiz(true);
+    }
+  }, 1000);
+}
+
+function updateTimer() {
+  const minutes = Math.floor(secondsLeft / 60);
+  const seconds = secondsLeft % 60;
+  $("timer").textContent =
+    "⏱️ " + minutes + ":" + String(seconds).padStart(2, "0");
+}
+
+function renderQuestion() {
+  selectedAnswer = null;
+  const question = questions[current];
+
+  $("questionCount").textContent =
+    "Question " + (current + 1) + " of " + questions.length;
+
+  $("progressBar").style.width =
+    ((current / questions.length) * 100) + "%";
+
+  $("questionText").textContent = question[0];
+  $("answers").replaceChildren();
+  $("feedback").textContent = "";
+  $("nextBtn").disabled = true;
+
+  question[1].forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.className = "answer";
+    button.textContent = String.fromCharCode(65 + index) + ". " + answer;
+
+    button.addEventListener("click", () => {
+      if (selectedAnswer !== null || quizEnded) return;
+
+      selectedAnswer = index;
+      button.classList.add("chosen");
+
+      document.querySelectorAll(".answer").forEach(item => {
+        item.disabled = true;
+      });
+
+      if (index === question[2]) {
+        score++;
+        $("feedback").textContent = "🎉 Correct! Great thinking!";
+      } else {
+        $("feedback").textContent = "💪 Good try! Keep going!";
+      }
+
+      $("scoreDisplay").textContent = "⭐ Score: " + score;
+      $("nextBtn").disabled = false;
+    });
+
+    $("answers").appendChild(button);
+  });
+
+  $("nextBtn").textContent =
+    current === questions.length - 1 ? "See My Results! 🎉" : "Next Question →";
+}
+
+function nextQuestion() {
+  if (selectedAnswer === null || quizEnded) return;
+
+  if (current < questions.length - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    finishQuiz(false);
+  }
+}
+
+function finishQuiz(timeUp) {
+  if (quizEnded) return;
+
+  quizEnded = true;
+  clearInterval(timerHandle);
+
+  $("progressBar").style.width = "100%";
+
+  const name = $("playerName").value.trim().slice(0, 30) || "Brain Explorer";
+  const total = questions.length;
+  const percentage = Math.round((score / total) * 100);
+
+  let category;
+  let message;
+
+  if (percentage >= 80) {
+    category = "Puzzle Champion! 🏆";
+    message = "Fantastic work! Keep exploring new challenges.";
+  } else if (percentage >= 50) {
+    category = "Brilliant Thinker! 🌟";
+    message = "Well done! Keep practising your problem-solving skills.";
+  } else {
+    category = "Rising Explorer! 🚀";
+    message = "Every challenge is a chance to learn. Try again!";
+  }
+
+  $("resultTitle").textContent = timeUp ? "Time's Up!" : "Quest Complete!";
+  $("finalScore").textContent = score + "/" + total;
+  $("resultCategory").textContent = category;
+  $("resultMessage").textContent = message;
+  $("resultTime").textContent = timeUp
+    ? "The 10-minute timer has ended."
+    : "You completed the quiz with " +
+      Math.floor(secondsLeft / 60) + " min " +
+      (secondsLeft % 60) + " sec remaining.";
+
+  $("certificateName").textContent = name;
+  $("certificateLevel").textContent = selectedLevel;
+  $("certificateScore").textContent = score + " out of " + total;
+  $("certificateDate").textContent = new Date().toLocaleDateString();
+  $("certificateId").textContent =
+    "KBQ-" + Date.now().toString(36).toUpperCase();
+
+  saveScore(name, score, total, selectedLevel);
+  renderLeaderboard();
+  showSection("result");
+}
+
+function getScores() {
+  try {
+    const scores = JSON.parse(localStorage.getItem("kbqScores") || "[]");
+    return Array.isArray(scores) ? scores : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveScore(name, score, total, level) {
+  const scores = getScores();
+
+  scores.push({
+    name,
+    score,
+    total,
+    level,
+    date: new Date().toISOString()
+  });
+
+  scores.sort((a, b) =>
+    (b.score / b.total) - (a.score / a.total)
+  );
+
+  try {
+    localStorage.setItem("kbqScores", JSON.stringify(scores.slice(0, 10)));
+  } catch {
+    // The quiz still works if local storage is unavailable.
+  }
+}
+
+function renderLeaderboard() {
+  const scores = getScores();
+  const container = $("leaderboard");
+  container.replaceChildren();
+
+  if (!scores.length) {
+    container.textContent = "No scores yet. Be the first to play!";
+    return;
+  }
+
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  const header = document.createElement("tr");
+
+  ["Rank", "Nickname", "Level", "Score"].forEach(label => {
+    const th = document.createElement("th");
+    th.textContent = label;
+    header.appendChild(th);
+  });
+
+  thead.appendChild(header);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+
+  scores.slice(0, 10).forEach((item, index) => {
+    const tr = document.createElement("tr");
+
+    [
+      String(index + 1),
+      item.name,
+      item.level,
+      item.score + "/" + item.total
+    ].forEach(value => {
+      const td = document.createElement("td");
+      td.textContent = value;
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+
+  table.appendChild(tbody);
+  container.appendChild(table);
+}
+
+$("startBtn").addEventListener("click", startQuiz);
+$("nextBtn").addEventListener("click", nextQuestion);
+$("printBtn").addEventListener("click", () => window.print());
+$("againBtn").addEventListener("click", () => showSection("welcome"));
+
+$("quitBtn").addEventListener("click", () => {
+  if (confirm("Would you like to quit this quiz? Your current attempt will end.")) {
+    clearInterval(timerHandle);
+    quizEnded = true;
+    showSection("welcome");
+  }
+});
+
+$("clearScoresBtn").addEventListener("click", () => {
+  if (confirm("Clear all scores stored in this browser?")) {
+    try {
+      localStorage.removeItem("kbqScores");
+    } catch {
+      // Local storage might be disabled.
+    }
+    renderLeaderboard();
+  }
+});
+
+renderLeaderboard();
 </script>
 </body>
 </html>
