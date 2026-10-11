@@ -3,25 +3,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Kids Brain Quest – Free Brain Games and Logic Puzzles</title>
-
   <meta name="description" content="Play free brain games for kids with fun logic puzzles, number patterns, math challenges and reasoning questions. Choose Easy, Medium or Hard and challenge your thinking!">
-
+  <meta name="keywords" content="kids brain quiz, free brain games for kids, online quiz for kids, logic puzzles for children, number patterns, brain teasers, educational quiz, reasoning questions">
+  <meta name="author" content="Kids Brain Quest">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#6d28d9">
-
   <link rel="canonical" href="https://priyanthd0712.github.io/IQ-Test/">
 
+  <meta property="og:title" content="Kids Brain Quest – Fun Brain Games for Kids">
+  <meta property="og:description" content="Challenge yourself with fun logic puzzles, number patterns and maths questions in Kids Brain Quest.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kids Brain Quest – Free Brain Games">
-  <meta property="og:description" content="Enjoy fun brain teasers, logic puzzles and reasoning challenges for kids. Play for free!">
   <meta property="og:url" content="https://priyanthd0712.github.io/IQ-Test/">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Kids Brain Quest">
-  <meta name="twitter:description" content="Free brain games, number patterns and logic puzzles for kids.">
+  <meta name="theme-color" content="#6d28d9">
 
   <script type="application/ld+json">
   {
@@ -29,11 +24,10 @@
     "@type": "WebApplication",
     "name": "Kids Brain Quest",
     "url": "https://priyanthd0712.github.io/IQ-Test/",
-    "description": "A free educational puzzle quiz for kids featuring logic puzzles, number patterns and reasoning challenges.",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Any",
-    "isAccessibleForFree": true,
-    "inLanguage": "en"
+    "description": "A free educational quiz for children featuring logic puzzles, maths questions, number patterns and reasoning challenges.",
+    "isAccessibleForFree": true
   }
   </script>
 
@@ -44,294 +38,391 @@
       --pink: #ec4899;
       --blue: #2563eb;
       --green: #15803d;
-      --bg: #f5f3ff;
-      --text: #211b35;
-      --card: #ffffff;
+      --ink: #202044;
+      --muted: #5b6078;
+      --paper: #ffffff;
+      --background: #f5f3ff;
+      --border: #e4defb;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f5f3ff, #eff6ff);
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
       line-height: 1.6;
     }
 
-    header {
-      padding: 30px 16px;
-      text-align: center;
-      color: white;
-      background: linear-gradient(135deg, #6d28d9, #9333ea, #ec4899);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: clamp(2rem, 6vw, 3.3rem);
-    }
-
-    header p {
-      margin: 10px auto 0;
-      max-width: 650px;
-    }
-
-    .mascot {
-      font-size: 65px;
-      margin-bottom: 4px;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 25px auto;
-      padding: 0 14px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 22px #34206412;
-    }
-
-    h2, h3 {
-      line-height: 1.3;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .levels {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .level {
-      border: 2px solid #e9d5ff;
-      background: white;
-      border-radius: 15px;
-      padding: 16px 8px;
-      cursor: pointer;
-      font-weight: bold;
-      color: var(--text);
-    }
-
-    .level.selected {
-      border-color: var(--purple);
-      background: #f3e8ff;
-    }
-
-    button {
+    button, input, select {
       font: inherit;
     }
 
-    .primary, .secondary {
-      border: none;
-      border-radius: 12px;
-      padding: 12px 20px;
+    button {
       cursor: pointer;
-      font-weight: bold;
     }
 
-    .primary {
-      color: white;
-      background: var(--purple);
-    }
-
-    .primary:hover {
-      background: var(--purple-dark);
-    }
-
-    .secondary {
-      color: var(--purple-dark);
-      background: #ede9fe;
-    }
-
-    button:focus-visible, input:focus-visible {
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
       outline: 3px solid #f59e0b;
       outline-offset: 3px;
     }
 
-    button:disabled {
-      opacity: .55;
-      cursor: not-allowed;
+    .hero {
+      padding: 42px 18px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(135deg, #6d28d9, #2563eb, #db2777);
     }
 
-    .full {
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 12px auto;
+      font-size: 1.08rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 13px;
+      border: 1px solid #ffffff80;
+      border-radius: 999px;
+      background: #ffffff20;
+      font-size: .9rem;
+    }
+
+    main {
+      width: min(100% - 28px, 950px);
+      margin: 26px auto 45px;
+    }
+
+    .card {
+      margin-bottom: 22px;
+      padding: clamp(18px, 4vw, 30px);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--paper);
+      box-shadow: 0 8px 28px #35205b0c;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--purple-dark);
+      line-height: 1.25;
+    }
+
+    h3 {
+      color: var(--purple-dark);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .setup-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 12px;
+      border: 1px solid #cfc7e9;
+      border-radius: 11px;
+      background: white;
+      color: var(--ink);
+    }
+
+    .level-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 18px;
+    }
+
+    .level-button {
+      padding: 13px 8px;
+      border: 2px solid var(--border);
+      border-radius: 13px;
+      background: #faf9ff;
+      font-weight: 700;
+    }
+
+    .level-button[aria-pressed="true"] {
+      color: white;
+      border-color: var(--purple);
+      background: var(--purple);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border: 0;
+      border-radius: 12px;
+      color: white;
+      background: var(--purple);
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .15s, opacity .15s;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: .93;
+    }
+
+    .button.secondary {
+      color: var(--purple-dark);
+      border: 1px solid var(--border);
+      background: #f3e8ff;
+    }
+
+    .button.green {
+      background: var(--green);
+    }
+
+    .button:disabled {
+      cursor: not-allowed;
+      opacity: .55;
+      transform: none;
+    }
+
+    .full-button {
       width: 100%;
     }
 
-    .stats {
+    .note {
+      padding: 12px 14px;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      background: #fffbeb;
+      color: #713f12;
+      font-size: .94rem;
+    }
+
+    .quiz-top {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
-      font-weight: bold;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     .pill {
-      background: #f3e8ff;
-      padding: 8px 12px;
+      display: inline-block;
+      padding: 6px 12px;
       border-radius: 999px;
+      background: #f3e8ff;
+      color: var(--purple-dark);
+      font-weight: 700;
     }
 
-    .progress {
-      height: 10px;
-      background: #e5e7eb;
-      border-radius: 99px;
+    .timer {
+      color: #b91c1c;
+      background: #fee2e2;
+    }
+
+    .progress-track {
+      height: 9px;
+      margin-bottom: 22px;
       overflow: hidden;
-      margin-bottom: 20px;
+      border-radius: 99px;
+      background: #e9e5f5;
     }
 
-    .progress-bar {
+    .progress-fill {
+      width: 0%;
       height: 100%;
-      width: 0;
       background: linear-gradient(90deg, #7c3aed, #ec4899);
       transition: width .2s;
     }
 
     .question {
-      font-size: 1.35rem;
-      font-weight: bold;
-      margin: 22px 0;
+      margin: 0 0 12px;
+      font-size: 1.12rem;
+      font-weight: 700;
     }
 
-    .answers {
+    .options {
       display: grid;
-      gap: 11px;
+      gap: 10px;
+      margin: 14px 0 24px;
     }
 
-    .answer {
-      text-align: left;
-      padding: 14px;
-      background: white;
-      border: 2px solid #e5e7eb;
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #ded8f0;
       border-radius: 12px;
+      background: #fff;
       cursor: pointer;
     }
 
-    .answer:hover {
-      border-color: var(--purple);
+    .option:hover {
       background: #faf5ff;
+      border-color: #a78bfa;
     }
 
-    .answer.chosen {
-      border-color: var(--purple);
-      background: #ede9fe;
+    .option input {
+      margin-top: 5px;
+      accent-color: var(--purple);
     }
 
-    .answer:disabled {
-      opacity: 1;
-      color: var(--text);
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #ddd6fe;
-      border-radius: 10px;
-      font: inherit;
-      margin: 8px 0 14px;
+    .quiz-navigation {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .result-score {
-      font-size: 3rem;
+      margin: 10px 0;
       color: var(--purple);
-      font-weight: bold;
+      font-size: clamp(2.5rem, 9vw, 4rem);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .result-message {
+      padding: 14px;
+      border-radius: 13px;
+      background: #f5f3ff;
     }
 
     .certificate {
-      border: 8px double #7c3aed;
-      padding: 28px 16px;
+      margin-top: 22px;
+      padding: 25px 15px;
+      border: 5px double #7c3aed;
+      border-radius: 12px;
+      background: #fffdf5;
       text-align: center;
-      background: #fffcf5;
-      border-radius: 8px;
-      margin-top: 20px;
     }
 
-    .certificate h2 {
-      color: var(--purple-dark);
-      font-size: 1.8rem;
+    .certificate h3 {
+      margin: 0;
+      color: #6d28d9;
+      font-size: clamp(1.5rem, 5vw, 2.3rem);
     }
 
     .certificate-name {
+      margin: 14px 0;
+      color: #1d4ed8;
       font-size: 1.7rem;
-      font-weight: bold;
-      color: #7c3aed;
+      font-weight: 800;
       overflow-wrap: anywhere;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    .certificate p {
+      margin: 7px 0;
     }
 
-    th, td {
-      text-align: left;
-      padding: 10px 7px;
-      border-bottom: 1px solid #e5e7eb;
+    .certificate small {
+      color: var(--muted);
+    }
+
+    .leaderboard-list {
+      padding-left: 24px;
+    }
+
+    .leaderboard-list li {
+      padding: 5px 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .feature {
+      padding: 16px;
+      border-radius: 14px;
+      background: #f8f7ff;
+    }
+
+    .feature h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .feature p {
+      margin: 0;
     }
 
     footer {
+      padding: 24px 16px;
+      color: white;
+      background: #241342;
       text-align: center;
-      padding: 24px 14px;
-      color: #5b536b;
-      font-size: .9rem;
     }
 
     footer a {
-      color: var(--purple-dark);
+      color: #ddd6fe;
     }
 
-    @media (max-width: 520px) {
-      .levels {
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 580px) {
+      .setup-grid, .feature-grid {
         grid-template-columns: 1fr;
       }
 
+      .level-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-navigation .button {
+        flex: 1;
+      }
+
       .card {
-        padding: 18px;
-      }
-
-      .question {
-        font-size: 1.15rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
+        border-radius: 16px;
       }
     }
 
     @media print {
       body * {
-        visibility: hidden;
+        visibility: hidden !important;
       }
 
       #certificate, #certificate * {
-        visibility: visible;
+        visibility: visible !important;
       }
 
       #certificate {
-        display: block !important;
         position: absolute;
-        left: 0;
-        top: 0;
+        inset: 0;
         width: 100%;
         margin: 0;
+        border: 6px double #6d28d9;
+        box-shadow: none;
       }
 
       .no-print {
@@ -342,469 +433,567 @@
 </head>
 
 <body>
-<header>
-  <div class="mascot" aria-hidden="true">🧠🌟</div>
-  <h1>Kids Brain Quest</h1>
-  <p>Think, explore, solve and shine! Play free brain games and fun logic puzzles.</p>
-</header>
+  <header class="hero">
+    <div aria-hidden="true" style="font-size:2.5rem">🧠 ⭐ 🚀</div>
+    <h1>Kids Brain Quest</h1>
+    <p>Think, solve, learn and have fun! Explore exciting number patterns, maths challenges and logic puzzles.</p>
+    <span class="hero-badge">Free educational brain quiz for kids</span>
+  </header>
 
-<main class="container">
-  <section id="welcome" class="card center">
-    <h2>Welcome, Brain Explorer! 🚀</h2>
-    <p>
-      Challenge yourself with number patterns, maths, logic and reasoning.
-      Choose a level and see how many questions you can solve!
-    </p>
+  <main>
+    <section class="card" id="welcome">
+      <h2>🎮 Start Your Brain Challenge</h2>
+      <p class="muted">Choose a difficulty level, enter your name and try 15 questions. You have 10 minutes to complete the challenge.</p>
 
-    <label for="playerName"><strong>Your nickname</strong></label>
-    <input id="playerName" maxlength="30" placeholder="Enter your nickname" autocomplete="nickname">
+      <div class="setup-grid">
+        <div>
+          <label for="playerName">Your name</label>
+          <input id="playerName" type="text" maxlength="35" placeholder="Enter your name" autocomplete="name">
+        </div>
+        <div>
+          <label for="difficultyInfo">Number of questions</label>
+          <input id="difficultyInfo" type="text" value="15 questions · 10 minutes" readonly>
+        </div>
+      </div>
 
-    <h3>Choose your challenge</h3>
+      <h3>Choose Your Level</h3>
+      <div class="level-buttons" role="group" aria-label="Difficulty level">
+        <button class="level-button" type="button" data-level="easy" aria-pressed="true">🌱 Easy</button>
+        <button class="level-button" type="button" data-level="medium" aria-pressed="false">🚀 Medium</button>
+        <button class="level-button" type="button" data-level="hard" aria-pressed="false">🔥 Hard</button>
+      </div>
 
-    <div class="levels">
-      <button class="level selected" data-level="Easy" aria-pressed="true">
-        🌱 Easy
-      </button>
-      <button class="level" data-level="Medium" aria-pressed="false">
-        🚀 Medium
-      </button>
-      <button class="level" data-level="Hard" aria-pressed="false">
-        🔥 Hard
-      </button>
-    </div>
+      <p id="levelDescription" class="muted">Easy: friendly number patterns, basic maths and simple reasoning.</p>
+      <button class="button full-button" id="startButton" type="button">Start My Quiz 🚀</button>
 
-    <p>⏱️ 10 minutes · 15 questions · Printable certificate</p>
-    <button id="startBtn" class="primary full">Start My Quest!</button>
-  </section>
+      <p class="note" style="margin-top:16px">
+        This is a fun educational quiz, not a scientifically validated IQ test. Your score reflects your answers to these questions only.
+      </p>
+    </section>
 
-  <section id="quiz" class="card hidden" aria-live="polite">
-    <div class="stats">
-      <span class="pill" id="questionCount">Question 1 of 15</span>
-      <span class="pill" id="timer" role="timer">⏱️ 10:00</span>
-      <span class="pill" id="scoreDisplay">⭐ Score: 0</span>
-    </div>
+    <section class="card" id="quizSection" hidden>
+      <div class="quiz-top">
+        <span class="pill" id="questionCounter">Question 1 of 15</span>
+        <span class="pill timer" id="timer" role="timer" aria-live="off">10:00</span>
+      </div>
 
-    <div class="progress" aria-label="Quiz progress">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
+      <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
 
-    <p id="levelLabel"></p>
-    <div class="question" id="questionText"></div>
-    <div class="answers" id="answers"></div>
-    <p id="feedback" aria-live="polite"></p>
+      <p class="muted" id="quizLevel"></p>
+      <h2 id="questionText" class="question">Your question will appear here.</h2>
+      <div class="options" id="options"></div>
 
-    <button id="nextBtn" class="primary full" disabled>Next Question →</button>
-    <p class="center"><button id="quitBtn" class="secondary">Quit Quiz</button></p>
-  </section>
+      <div class="quiz-navigation">
+        <button class="button secondary" id="previousButton" type="button">← Previous</button>
+        <button class="button" id="nextButton" type="button">Next →</button>
+        <button class="button green" id="submitButton" type="button" hidden>Finish Quiz ✓</button>
+      </div>
+      <p class="muted" id="answeredInfo" aria-live="polite"></p>
+    </section>
 
-  <section id="result" class="card center hidden" aria-live="polite">
-    <div style="font-size:60px" aria-hidden="true">🎉</div>
-    <h2 id="resultTitle">Quest Complete!</h2>
-    <p class="result-score" id="finalScore">0/15</p>
-    <h3 id="resultCategory"></h3>
-    <p id="resultMessage"></p>
-    <p id="resultTime"></p>
+    <section class="card" id="resultSection" hidden>
+      <h2>🏆 Your Brain Quest Results</h2>
+      <p id="resultGreeting"></p>
+      <div class="result-score" id="scoreText">0/15</div>
+      <p id="percentageText"></p>
+      <div class="result-message">
+        <h3 id="resultCategory">Great effort!</h3>
+        <p id="resultFeedback"></p>
+      </div>
 
-    <div id="certificate" class="certificate">
-      <div style="font-size:44px">🏆 🌟 🏆</div>
-      <h2>Certificate of Achievement</h2>
-      <p>This certificate is proudly presented to</p>
-      <div id="certificateName" class="certificate-name">Brain Explorer</div>
-      <p>for completing the Kids Brain Quest challenge!</p>
-      <p><strong>Level:</strong> <span id="certificateLevel"></span></p>
-      <p><strong>Score:</strong> <span id="certificateScore"></span></p>
-      <p><strong>Date:</strong> <span id="certificateDate"></span></p>
-      <p><small>Certificate ID: <span id="certificateId"></span></small></p>
-      <p><em>Keep learning, thinking and exploring!</em></p>
-    </div>
+      <div id="certificate" class="certificate">
+        <p style="font-size:2rem;margin:0">🏆 🌟 🏆</p>
+        <h3>Certificate of Participation</h3>
+        <p>This certificate is proudly presented to</p>
+        <div class="certificate-name" id="certificateName">Brain Explorer</div>
+        <p>for completing the <strong>Kids Brain Quest</strong> educational challenge.</p>
+        <p id="certificateScore"></p>
+        <p id="certificateDate"></p>
+        <small>Keep learning, keep thinking, and keep exploring!</small>
+      </div>
 
-    <div class="no-print" style="margin-top:20px">
-      <button class="primary" id="printBtn">🖨️ Print Certificate</button>
-      <button class="secondary" id="againBtn">Play Again</button>
-    </div>
-  </section>
+      <div class="no-print" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+        <button class="button green" id="printCertificateButton" type="button">Print / Save Certificate</button>
+        <button class="button" id="retryButton" type="button">Try Again</button>
+      </div>
+    </section>
 
-  <section class="card">
-    <h2>🏆 Top Scores on This Device</h2>
-    <p>
-      Your local leaderboard stores scores in this browser only.
-      It is not a shared online ranking.
-    </p>
-    <div id="leaderboard">
-      <p>No scores yet. Be the first to play!</p>
-    </div>
-    <button class="secondary" id="clearScoresBtn">Clear Local Scores</button>
-  </section>
+    <section class="card" id="leaderboardSection">
+      <h2>🥇 Top Scores on This Device</h2>
+      <p class="muted">This leaderboard saves scores in this browser on this device. It is not a shared online leaderboard.</p>
+      <ol class="leaderboard-list" id="leaderboard">
+        <li>No scores yet. Be the first to play!</li>
+      </ol>
+      <button class="button secondary" id="clearScoresButton" type="button">Clear Local Scores</button>
+    </section>
 
-  <section class="card">
-    <h2>🧩 Fun Brain Games and Logic Puzzles for Kids</h2>
-    <p>
-      Welcome to Kids Brain Quest, a free online brain quiz for children.
-      Explore number patterns, simple maths, logical reasoning and fun
-      thinking challenges. Choose Easy, Medium or Hard and practise solving
-      problems one question at a time.
-    </p>
-    <h3>How to play</h3>
-    <ul>
-      <li>Choose a difficulty level that feels right for you.</li>
-      <li>Answer 15 multiple-choice questions before the timer runs out.</li>
-      <li>See your score and earn a printable completion certificate.</li>
-      <li>Try again and challenge yourself with another level.</li>
-    </ul>
-    <p>
-      Kids Brain Quest is an entertainment and learning activity.
-      Its scores are not a scientifically validated IQ measurement and
-      should not be used to assess a child's intelligence.
-    </p>
-  </section>
-</main>
+    <section class="card" id="about">
+      <h2>🌟 About Kids Brain Quest</h2>
+      <p>
+        Kids Brain Quest is a free educational quiz created to make learning enjoyable through logic puzzles, number patterns, maths challenges and reasoning questions. Children can select a level, answer questions and celebrate their effort with a printable participation certificate.
+      </p>
 
-<footer>
-  <p>© <span id="year"></span> Kids Brain Quest · Learn through play! 🌈</p>
-  <p>Free educational puzzles for curious minds.</p>
-</footer>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>🧩 Logic and Reasoning</h3>
+          <p>Practise looking for clues, identifying patterns and thinking through problems.</p>
+        </div>
+        <div class="feature">
+          <h3>🔢 Maths Challenges</h3>
+          <p>Explore number sequences and arithmetic questions in a quiz format.</p>
+        </div>
+        <div class="feature">
+          <h3>🎯 Three Difficulty Levels</h3>
+          <p>Choose Easy, Medium or Hard for a different level of challenge.</p>
+        </div>
+        <div class="feature">
+          <h3>🏅 Celebrate Your Effort</h3>
+          <p>Review your score and print a certificate after completing the quiz.</p>
+        </div>
+      </div>
+    </section>
 
-<script>
-"use strict";
+    <section class="card" id="why">
+      <h2>❓ Why Is This Quiz Conducted?</h2>
 
-const questionBanks = {
-  Easy: [
-    ["What number comes next? 2, 4, 6, 8, ?", ["9", "10", "11", "12"], 1],
-    ["Which shape has three sides?", ["Square", "Circle", "Triangle", "Rectangle"], 2],
-    ["What is 5 + 7?", ["10", "11", "12", "13"], 2],
-    ["Which one is different?", ["Apple", "Banana", "Carrot", "Mango"], 2],
-    ["What number comes next? 10, 20, 30, ?", ["35", "40", "45", "50"], 1],
-    ["How many days are in a week?", ["5", "6", "7", "8"], 2],
-    ["Which is the biggest number?", ["17", "71", "27", "37"], 1],
-    ["What is half of 20?", ["5", "10", "15", "20"], 1],
-    ["Which animal says 'meow'?", ["Dog", "Cat", "Cow", "Duck"], 1],
-    ["What is 9 - 4?", ["3", "4", "5", "6"], 2],
-    ["Complete the pattern: A, B, A, B, ?", ["A", "C", "D", "E"], 0],
-    ["How many legs do two spiders have altogether?", ["8", "12", "16", "18"], 2],
-    ["Which is a colour?", ["Happy", "Blue", "Fast", "Soft"], 1],
-    ["What comes after 99?", ["90", "100", "101", "109"], 1],
-    ["If you have 3 sweets and get 2 more, how many?", ["4", "5", "6", "7"], 1]
-  ],
+      <h3>What is Kids Brain Quest?</h3>
+      <p>
+        Kids Brain Quest is a fun educational quiz designed to encourage children to think, solve puzzles and enjoy learning through friendly challenges.
+      </p>
 
-  Medium: [
-    ["What number comes next? 3, 6, 12, 24, ?", ["30", "36", "48", "60"], 2],
-    ["What is 15 × 4?", ["45", "50", "60", "65"], 2],
-    ["Which number does not belong?", ["9", "16", "25", "30"], 3],
-    ["Complete the pattern: 1, 4, 9, 16, ?", ["20", "24", "25", "36"], 2],
-    ["If all roses are flowers, are roses flowers?", ["Yes", "No", "Never", "Cannot be a flower"], 0],
-    ["What is 144 ÷ 12?", ["10", "11", "12", "14"], 2],
-    ["A clock shows 3:00. What angle is between the hands?", ["45°", "60°", "90°", "180°"], 2],
-    ["What comes next? 2, 5, 8, 11, ?", ["12", "13", "14", "15"], 2],
-    ["Which word is the opposite of 'ancient'?", ["Old", "Modern", "Historic", "Past"], 1],
-    ["If 4 pencils cost 20 coins, what do 2 cost?", ["5", "10", "15", "20"], 1],
-    ["How many sides do 3 triangles have altogether?", ["6", "8", "9", "12"], 2],
-    ["What is the smallest number?", ["0.8", "0.08", "0.18", "0.81"], 1],
-    ["Find the missing number: 7, 14, 21, ?, 35", ["24", "27", "28", "30"], 2],
-    ["A dozen eggs means how many eggs?", ["10", "11", "12", "24"], 2],
-    ["If today is Monday, what day is it in 10 days?", ["Wednesday", "Thursday", "Friday", "Saturday"], 1]
-  ],
+      <h3>Why is this quiz conducted?</h3>
+      <p>
+        The quiz is conducted to make learning enjoyable and give children an opportunity to practise logical reasoning, mathematics, number patterns and problem-solving skills.
+      </p>
 
-  Hard: [
-    ["What comes next? 1, 1, 2, 3, 5, 8, ?", ["11", "12", "13", "15"], 2],
-    ["What is 25% of 200?", ["25", "40", "50", "75"], 2],
-    ["All flims are glops. No glops are red. Can a flim be red?", ["Yes", "No", "Always", "Not enough information"], 1],
-    ["Find the next number: 2, 6, 12, 20, 30, ?", ["36", "40", "42", "44"], 2],
-    ["A number multiplied by 3 equals 54. What is the number?", ["16", "18", "21", "27"], 1],
-    ["Which fraction is greatest?", ["1/2", "2/3", "3/5", "5/8"], 1],
-    ["If 5 machines make 5 toys in 5 minutes, how long for 1 machine to make 1 toy?", ["1 minute", "5 minutes", "10 minutes", "25 minutes"], 1],
-    ["What is the perimeter of a square with side 7 cm?", ["14 cm", "21 cm", "28 cm", "49 cm"], 2],
-    ["Complete the pattern: 81, 27, 9, 3, ?", ["0", "1", "2", "6"], 1],
-    ["A bag has red and blue balls. How many draws guarantee two of the same colour?", ["1", "2", "3", "4"], 2],
-    ["What is 12 squared?", ["124", "132", "144", "156"], 2],
-    ["A rectangle is 8 cm long and 5 cm wide. What is its area?", ["13 cm²", "26 cm²", "40 cm²", "80 cm²"], 2],
-    ["If 3x = 27, what is x + 4?", ["9", "11", "13", "15"], 1],
-    ["A train leaves at 2:45 and travels for 1 hour 35 minutes. When does it arrive?", ["4:10", "4:20", "4:30", "4:35"], 1],
-    ["What comes next? 100, 50, 25, 12.5, ?", ["5", "6.25", "7.5", "10"], 1]
-  ]
-};
+      <h3>What is the purpose of this quiz?</h3>
+      <ul>
+        <li>To encourage logical and creative thinking.</li>
+        <li>To practise basic mathematics and reasoning.</li>
+        <li>To build confidence in attempting puzzles.</li>
+        <li>To encourage curiosity and a love of learning.</li>
+        <li>To make practice enjoyable through scores and challenges.</li>
+      </ul>
 
-const $ = id => document.getElementById(id);
+      <h3>Why are there three difficulty levels?</h3>
+      <p>
+        Easy, Medium and Hard provide different challenges. Children can begin with a comfortable level and choose a more challenging one whenever they feel ready.
+      </p>
 
-let selectedLevel = "Easy";
-let questions = [];
-let current = 0;
-let score = 0;
-let selectedAnswer = null;
-let secondsLeft = 600;
-let timerHandle = null;
-let quizEnded = false;
-let startedAt = 0;
+      <h3>What can children gain from participating?</h3>
+      <p>
+        Children can practise thinking skills, challenge themselves, learn from mistakes and celebrate their efforts. The quiz is intended for educational entertainment, not to diagnose or measure a child's intelligence.
+      </p>
 
-$("year").textContent = new Date().getFullYear();
+      <p class="note">
+        <strong>Important note:</strong> Kids Brain Quest scores are not a scientifically validated IQ measurement and should not be used to compare children's intelligence.
+      </p>
+    </section>
 
-document.querySelectorAll(".level").forEach(button => {
-  button.addEventListener("click", () => {
-    selectedLevel = button.dataset.level;
-    document.querySelectorAll(".level").forEach(item => {
-      const active = item === button;
-      item.classList.toggle("selected", active);
-      item.setAttribute("aria-pressed", String(active));
-    });
-  });
-});
+    <section class="card" id="howToPlay">
+      <h2>📘 How to Play</h2>
+      <ol>
+        <li>Enter your name.</li>
+        <li>Choose Easy, Medium or Hard.</li>
+        <li>Press Start My Quiz.</li>
+        <li>Choose one answer for each question.</li>
+        <li>Complete as many questions as you can within 10 minutes.</li>
+        <li>View your result and print your certificate if you wish.</li>
+      </ol>
+    </section>
+  </main>
 
-function showSection(id) {
-  ["welcome", "quiz", "result"].forEach(section => {
-    $(section).classList.toggle("hidden", section !== id);
-  });
-}
+  <footer>
+    <p><strong>Kids Brain Quest</strong> — Think. Learn. Explore.</p>
+    <p>Free educational brain games and reasoning challenges for kids.</p>
+    <p>© <span id="year"></span> Kids Brain Quest</p>
+  </footer>
 
-function shuffle(items) {
-  const copy = [...items];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
+  <script>
+    "use strict";
 
-function startQuiz() {
-  clearInterval(timerHandle);
-  questions = shuffle(questionBanks[selectedLevel]);
-  current = 0;
-  score = 0;
-  secondsLeft = 600;
-  quizEnded = false;
-  startedAt = Date.now();
+    const QUESTION_COUNT = 15;
+    const QUIZ_SECONDS = 10 * 60;
+    const STORAGE_KEY = "kidsBrainQuestScoresV1";
 
-  $("scoreDisplay").textContent = "⭐ Score: 0";
-  $("levelLabel").textContent = "Level: " + selectedLevel;
-  $("feedback").textContent = "";
-  showSection("quiz");
-  renderQuestion();
-  updateTimer();
+    const questionBanks = {
+      easy: [
+        { q: "What number comes next: 2, 4, 6, 8, ?", options: ["9", "10", "12", "14"], answer: 1 },
+        { q: "What is 7 + 5?", options: ["11", "12", "13", "14"], answer: 1 },
+        { q: "Which shape has three sides?", options: ["Square", "Circle", "Triangle", "Rectangle"], answer: 2 },
+        { q: "Which number is the largest?", options: ["19", "29", "9", "20"], answer: 1 },
+        { q: "What comes next: A, B, C, D, ?", options: ["F", "G", "E", "A"], answer: 2 },
+        { q: "If you have 3 apples and get 2 more, how many do you have?", options: ["4", "5", "6", "7"], answer: 1 },
+        { q: "Which one is different?", options: ["Cat", "Dog", "Rabbit", "Chair"], answer: 3 },
+        { q: "What is half of 10?", options: ["2", "4", "5", "6"], answer: 2 },
+        { q: "What number comes next: 5, 10, 15, 20, ?", options: ["22", "24", "25", "30"], answer: 2 },
+        { q: "How many days are in a week?", options: ["5", "6", "7", "8"], answer: 2 },
+        { q: "Which animal usually says 'meow'?", options: ["Cow", "Cat", "Duck", "Horse"], answer: 1 },
+        { q: "What is 9 - 4?", options: ["3", "4", "5", "6"], answer: 2 },
+        { q: "Which comes first alphabetically?", options: ["Mango", "Apple", "Banana", "Grape"], answer: 1 },
+        { q: "What number comes next: 1, 3, 5, 7, ?", options: ["8", "9", "10", "11"], answer: 1 },
+        { q: "You have 4 pairs of socks. How many socks is that?", options: ["4", "6", "8", "10"], answer: 2 }
+      ],
 
-  timerHandle = setInterval(() => {
-    secondsLeft--;
-    updateTimer();
+      medium: [
+        { q: "What comes next: 3, 6, 12, 24, ?", options: ["36", "42", "48", "50"], answer: 2 },
+        { q: "What is 15 × 4?", options: ["45", "50", "60", "65"], answer: 2 },
+        { q: "Which number does not belong: 4, 9, 16, 20, 25?", options: ["9", "16", "20", "25"], answer: 2 },
+        { q: "If today is Tuesday, what day will it be in 10 days?", options: ["Thursday", "Friday", "Saturday", "Sunday"], answer: 1 },
+        { q: "What comes next: 2, 5, 8, 11, ?", options: ["12", "13", "14", "15"], answer: 2 },
+        { q: "A dozen eggs contains how many eggs?", options: ["10", "11", "12", "14"], answer: 2 },
+        { q: "What is 100 ÷ 5?", options: ["10", "15", "20", "25"], answer: 2 },
+        { q: "Which word is closest in meaning to 'rapid'?", options: ["Slow", "Fast", "Quiet", "Small"], answer: 1 },
+        { q: "A rectangle is 6 cm long and 3 cm wide. What is its perimeter?", options: ["9 cm", "12 cm", "18 cm", "24 cm"], answer: 2 },
+        { q: "What comes next: 1, 4, 9, 16, ?", options: ["20", "24", "25", "36"], answer: 2 },
+        { q: "If 3 pencils cost ₹15, how much does 1 pencil cost?", options: ["₹3", "₹5", "₹10", "₹15"], answer: 1 },
+        { q: "Which fraction is equal to one half?", options: ["2/3", "3/4", "4/8", "1/3"], answer: 2 },
+        { q: "Find the missing number: 7, 14, 21, ?, 35", options: ["24", "27", "28", "30"], answer: 2 },
+        { q: "Ravi is taller than Mina. Mina is taller than Sam. Who is shortest?", options: ["Ravi", "Mina", "Sam", "Cannot tell"], answer: 2 },
+        { q: "What is 30% of 100?", options: ["3", "10", "30", "70"], answer: 2 }
+      ],
 
-    if (secondsLeft <= 0) {
-      finishQuiz(true);
-    }
-  }, 1000);
-}
+      hard: [
+        { q: "What comes next: 2, 6, 12, 20, 30, ?", options: ["36", "40", "42", "44"], answer: 2 },
+        { q: "What is the square of 13?", options: ["156", "159", "169", "179"], answer: 2 },
+        { q: "If ALL BLOOPS are RAZZIES and ALL RAZZIES are LAZZIES, are all BLOOPS LAZZIES?", options: ["Yes", "No", "Only some", "Cannot be determined"], answer: 0 },
+        { q: "What comes next: 81, 27, 9, 3, ?", options: ["0", "1", "2", "6"], answer: 1 },
+        { q: "A number is doubled and then 6 is added. The result is 20. What is the number?", options: ["5", "6", "7", "8"], answer: 2 },
+        { q: "Which number is prime?", options: ["21", "27", "29", "33"], answer: 2 },
+        { q: "What is the next number: 1, 1, 2, 3, 5, 8, ?", options: ["11", "12", "13", "15"], answer: 2 },
+        { q: "A clock shows 3:00. What is the angle between its hands?", options: ["45°", "60°", "90°", "180°"], answer: 2 },
+        { q: "If 5 machines make 5 toys in 5 minutes, how long would 10 identical machines take to make 10 toys?", options: ["2.5 minutes", "5 minutes", "10 minutes", "50 minutes"], answer: 1 },
+        { q: "What comes next: 100, 50, 25, 12.5, ?", options: ["5", "6.25", "7.5", "10"], answer: 1 },
+        { q: "A book and a pen cost ₹110 together. The book costs ₹100 more than the pen. How much does the pen cost?", options: ["₹5", "₹10", "₹15", "₹20"], answer: 0 },
+        { q: "Which number completes the pattern: 4, 7, 13, 25, 49, ?", options: ["73", "89", "97", "99"], answer: 2 },
+        { q: "If yesterday was Sunday, what day is the day after tomorrow?", options: ["Tuesday", "Wednesday", "Thursday", "Friday"], answer: 1 },
+        { q: "A square has a perimeter of 36 cm. What is its area?", options: ["36 cm²", "72 cm²", "81 cm²", "90 cm²"], answer: 2 },
+        { q: "What is 3/4 of 80?", options: ["40", "50", "60", "70"], answer: 2 }
+      ]
+    };
 
-function updateTimer() {
-  const minutes = Math.floor(secondsLeft / 60);
-  const seconds = secondsLeft % 60;
-  $("timer").textContent =
-    "⏱️ " + minutes + ":" + String(seconds).padStart(2, "0");
-}
+    const levelDescriptions = {
+      easy: "Easy: friendly number patterns, basic maths and simple reasoning.",
+      medium: "Medium: number sequences, arithmetic, vocabulary and everyday reasoning.",
+      hard: "Hard: multi-step puzzles, number patterns and more challenging reasoning."
+    };
 
-function renderQuestion() {
-  selectedAnswer = null;
-  const question = questions[current];
+    const $ = id => document.getElementById(id);
 
-  $("questionCount").textContent =
-    "Question " + (current + 1) + " of " + questions.length;
+    let selectedLevel = "easy";
+    let questions = [];
+    let answers = [];
+    let currentQuestion = 0;
+    let secondsLeft = QUIZ_SECONDS;
+    let timerId = null;
+    let quizFinished = false;
+    let player = "";
+    let latestResult = null;
 
-  $("progressBar").style.width =
-    ((current / questions.length) * 100) + "%";
+    $("year").textContent = new Date().getFullYear();
 
-  $("questionText").textContent = question[0];
-  $("answers").replaceChildren();
-  $("feedback").textContent = "";
-  $("nextBtn").disabled = true;
+    document.querySelectorAll(".level-button").forEach(button => {
+      button.addEventListener("click", () => {
+        if (timerId) return;
 
-  question[1].forEach((answer, index) => {
-    const button = document.createElement("button");
-    button.className = "answer";
-    button.textContent = String.fromCharCode(65 + index) + ". " + answer;
+        selectedLevel = button.dataset.level;
 
-    button.addEventListener("click", () => {
-      if (selectedAnswer !== null || quizEnded) return;
+        document.querySelectorAll(".level-button").forEach(item => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
 
-      selectedAnswer = index;
-      button.classList.add("chosen");
-
-      document.querySelectorAll(".answer").forEach(item => {
-        item.disabled = true;
+        $("levelDescription").textContent = levelDescriptions[selectedLevel];
       });
+    });
 
-      if (index === question[2]) {
-        score++;
-        $("feedback").textContent = "🎉 Correct! Great thinking!";
-      } else {
-        $("feedback").textContent = "💪 Good try! Keep going!";
+    function shuffle(array) {
+      const result = array.slice();
+
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
       }
 
-      $("scoreDisplay").textContent = "⭐ Score: " + score;
-      $("nextBtn").disabled = false;
-    });
-
-    $("answers").appendChild(button);
-  });
-
-  $("nextBtn").textContent =
-    current === questions.length - 1 ? "See My Results! 🎉" : "Next Question →";
-}
-
-function nextQuestion() {
-  if (selectedAnswer === null || quizEnded) return;
-
-  if (current < questions.length - 1) {
-    current++;
-    renderQuestion();
-  } else {
-    finishQuiz(false);
-  }
-}
-
-function finishQuiz(timeUp) {
-  if (quizEnded) return;
-
-  quizEnded = true;
-  clearInterval(timerHandle);
-
-  $("progressBar").style.width = "100%";
-
-  const name = $("playerName").value.trim().slice(0, 30) || "Brain Explorer";
-  const total = questions.length;
-  const percentage = Math.round((score / total) * 100);
-
-  let category;
-  let message;
-
-  if (percentage >= 80) {
-    category = "Puzzle Champion! 🏆";
-    message = "Fantastic work! Keep exploring new challenges.";
-  } else if (percentage >= 50) {
-    category = "Brilliant Thinker! 🌟";
-    message = "Well done! Keep practising your problem-solving skills.";
-  } else {
-    category = "Rising Explorer! 🚀";
-    message = "Every challenge is a chance to learn. Try again!";
-  }
-
-  $("resultTitle").textContent = timeUp ? "Time's Up!" : "Quest Complete!";
-  $("finalScore").textContent = score + "/" + total;
-  $("resultCategory").textContent = category;
-  $("resultMessage").textContent = message;
-  $("resultTime").textContent = timeUp
-    ? "The 10-minute timer has ended."
-    : "You completed the quiz with " +
-      Math.floor(secondsLeft / 60) + " min " +
-      (secondsLeft % 60) + " sec remaining.";
-
-  $("certificateName").textContent = name;
-  $("certificateLevel").textContent = selectedLevel;
-  $("certificateScore").textContent = score + " out of " + total;
-  $("certificateDate").textContent = new Date().toLocaleDateString();
-  $("certificateId").textContent =
-    "KBQ-" + Date.now().toString(36).toUpperCase();
-
-  saveScore(name, score, total, selectedLevel);
-  renderLeaderboard();
-  showSection("result");
-}
-
-function getScores() {
-  try {
-    const scores = JSON.parse(localStorage.getItem("kbqScores") || "[]");
-    return Array.isArray(scores) ? scores : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveScore(name, score, total, level) {
-  const scores = getScores();
-
-  scores.push({
-    name,
-    score,
-    total,
-    level,
-    date: new Date().toISOString()
-  });
-
-  scores.sort((a, b) =>
-    (b.score / b.total) - (a.score / a.total)
-  );
-
-  try {
-    localStorage.setItem("kbqScores", JSON.stringify(scores.slice(0, 10)));
-  } catch {
-    // The quiz still works if local storage is unavailable.
-  }
-}
-
-function renderLeaderboard() {
-  const scores = getScores();
-  const container = $("leaderboard");
-  container.replaceChildren();
-
-  if (!scores.length) {
-    container.textContent = "No scores yet. Be the first to play!";
-    return;
-  }
-
-  const table = document.createElement("table");
-  const thead = document.createElement("thead");
-  const header = document.createElement("tr");
-
-  ["Rank", "Nickname", "Level", "Score"].forEach(label => {
-    const th = document.createElement("th");
-    th.textContent = label;
-    header.appendChild(th);
-  });
-
-  thead.appendChild(header);
-  table.appendChild(thead);
-
-  const tbody = document.createElement("tbody");
-
-  scores.slice(0, 10).forEach((item, index) => {
-    const tr = document.createElement("tr");
-
-    [
-      String(index + 1),
-      item.name,
-      item.level,
-      item.score + "/" + item.total
-    ].forEach(value => {
-      const td = document.createElement("td");
-      td.textContent = value;
-      tr.appendChild(td);
-    });
-
-    tbody.appendChild(tr);
-  });
-
-  table.appendChild(tbody);
-  container.appendChild(table);
-}
-
-$("startBtn").addEventListener("click", startQuiz);
-$("nextBtn").addEventListener("click", nextQuestion);
-$("printBtn").addEventListener("click", () => window.print());
-$("againBtn").addEventListener("click", () => showSection("welcome"));
-
-$("quitBtn").addEventListener("click", () => {
-  if (confirm("Would you like to quit this quiz? Your current attempt will end.")) {
-    clearInterval(timerHandle);
-    quizEnded = true;
-    showSection("welcome");
-  }
-});
-
-$("clearScoresBtn").addEventListener("click", () => {
-  if (confirm("Clear all scores stored in this browser?")) {
-    try {
-      localStorage.removeItem("kbqScores");
-    } catch {
-      // Local storage might be disabled.
+      return result;
     }
-    renderLeaderboard();
-  }
-});
 
-renderLeaderboard();
-</script>
+    function startQuiz() {
+      const enteredName = $("playerName").value.trim();
+
+      if (!enteredName) {
+        $("playerName").focus();
+        alert("Please enter your name before starting.");
+        return;
+      }
+
+      player = enteredName.slice(0, 35);
+      questions = shuffle(questionBanks[selectedLevel]).slice(0, QUESTION_COUNT);
+      answers = Array(QUESTION_COUNT).fill(null);
+      currentQuestion = 0;
+      secondsLeft = QUIZ_SECONDS;
+      quizFinished = false;
+      latestResult = null;
+
+      $("welcome").hidden = true;
+      $("resultSection").hidden = true;
+      $("quizSection").hidden = false;
+      $("quizLevel").textContent =
+        selectedLevel.charAt(0).toUpperCase() + selectedLevel.slice(1) + " Level";
+
+      renderQuestion();
+      updateTimerDisplay();
+
+      clearInterval(timerId);
+      timerId = setInterval(() => {
+        secondsLeft--;
+        updateTimerDisplay();
+
+        if (secondsLeft <= 0) {
+          finishQuiz(true);
+        }
+      }, 1000);
+
+      $("quizSection").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function renderQuestion() {
+      const question = questions[currentQuestion];
+
+      $("questionCounter").textContent =
+        `Question ${currentQuestion + 1} of ${QUESTION_COUNT}`;
+
+      $("questionText").textContent = question.q;
+      $("progressFill").style.width =
+        `${((currentQuestion + 1) / QUESTION_COUNT) * 100}%`;
+
+      $("progressBar").setAttribute("aria-valuenow", currentQuestion + 1);
+
+      const optionsContainer = $("options");
+      optionsContainer.replaceChildren();
+
+      question.options.forEach((optionText, index) => {
+        const label = document.createElement("label");
+        label.className = "option";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "answer";
+        radio.value = index;
+        radio.checked = answers[currentQuestion] === index;
+
+        radio.addEventListener("change", () => {
+          answers[currentQuestion] = index;
+          updateAnsweredInfo();
+        });
+
+        const text = document.createElement("span");
+        text.textContent = optionText;
+
+        label.append(radio, text);
+        optionsContainer.append(label);
+      });
+
+      $("previousButton").disabled = currentQuestion === 0;
+      $("nextButton").hidden = currentQuestion === QUESTION_COUNT - 1;
+      $("submitButton").hidden = currentQuestion !== QUESTION_COUNT - 1;
+
+      updateAnsweredInfo();
+    }
+
+    function updateAnsweredInfo() {
+      const answered = answers.filter(answer => answer !== null).length;
+      $("answeredInfo").textContent =
+        `${answered} of ${QUESTION_COUNT} questions answered`;
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(secondsLeft / 60);
+      const seconds = secondsLeft % 60;
+
+      $("timer").textContent =
+        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+      $("timer").setAttribute(
+        "aria-label",
+        `${minutes} minutes and ${seconds} seconds remaining`
+      );
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < QUESTION_COUNT - 1) {
+        currentQuestion++;
+        renderQuestion();
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion();
+      }
+    }
+
+    function finishQuiz(timeExpired = false) {
+      if (quizFinished) return;
+
+      quizFinished = true;
+      clearInterval(timerId);
+      timerId = null;
+
+      const score = questions.reduce((total, question, index) => {
+        return total + (answers[index] === question.answer ? 1 : 0);
+      }, 0);
+
+      const percentage = Math.round((score / QUESTION_COUNT) * 100);
+
+      let category;
+      let feedback;
+
+      if (percentage >= 80) {
+        category = "🌟 Excellent Problem-Solving Effort!";
+        feedback = "Wonderful work! Keep exploring new puzzles and challenging yourself.";
+      } else if (percentage >= 60) {
+        category = "🚀 Great Progress!";
+        feedback = "Good job! Keep practising and try another level when you are ready.";
+      } else if (percentage >= 40) {
+        category = "🧩 Keep Exploring!";
+        feedback = "You are learning as you go. Review your answers and give it another try.";
+      } else {
+        category = "🌱 Every Try Helps You Learn!";
+        feedback = "Keep practising, take your time and enjoy discovering how puzzles work.";
+      }
+
+      if (timeExpired) {
+        feedback += " The timer ended, so only your answers before time ran out were counted.";
+      }
+
+      latestResult = {
+        name: player,
+        score,
+        percentage,
+        level: selectedLevel,
+        date: new Date().toLocaleDateString()
+      };
+
+      $("quizSection").hidden = true;
+      $("resultSection").hidden = false;
+
+      $("resultGreeting").textContent = `Well done, ${player}! You completed the ${selectedLevel} challenge.`;
+      $("scoreText").textContent = `${score}/${QUESTION_COUNT}`;
+      $("percentageText").textContent = `${percentage}% correct`;
+      $("resultCategory").textContent = category;
+      $("resultFeedback").textContent = feedback;
+
+      $("certificateName").textContent = player;
+      $("certificateScore").textContent =
+        `Challenge: ${selectedLevel.toUpperCase()} · Score: ${score}/${QUESTION_COUNT}`;
+      $("certificateDate").textContent = `Date: ${latestResult.date}`;
+
+      saveScore(latestResult);
+      renderLeaderboard();
+
+      $("resultSection").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function getScores() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        return Array.isArray(stored) ? stored : [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveScore(result) {
+      const scores = getScores();
+
+      scores.push({
+        name: result.name,
+        score: result.score,
+        level: result.level,
+        date: result.date,
+        created: Date.now()
+      });
+
+      scores.sort((a, b) => b.score - a.score || a.created - b.created);
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(scores.slice(0, 10)));
+      } catch (error) {
+        // The quiz still works if browser storage is unavailable.
+      }
+    }
+
+    function renderLeaderboard() {
+      const list = $("leaderboard");
+      list.replaceChildren();
+
+      const scores = getScores();
+
+      if (scores.length === 0) {
+        const item = document.createElement("li");
+        item.textContent = "No scores yet. Be the first to play!";
+        list.append(item);
+        return;
+      }
+
+      scores.forEach(entry => {
+        const item = document.createElement("li");
+        item.textContent =
+          `${entry.name} — ${entry.score}/${QUESTION_COUNT} (${entry.level}) · ${entry.date}`;
+        list.append(item);
+      });
+    }
+
+    $("startButton").addEventListener("click", startQuiz);
+    $("nextButton").addEventListener("click", nextQuestion);
+    $("previousButton").addEventListener("click", previousQuestion);
+
+    $("submitButton").addEventListener("click", () => {
+      const unanswered = answers.filter(answer => answer === null).length;
+
+      if (unanswered > 0) {
+        const confirmFinish = confirm(
+          `You have ${unanswered} unanswered question(s). Finish the quiz anyway?`
+        );
+
+        if (!confirmFinish) return;
+      }
+
+      finishQuiz(false);
+    });
+
+    $("printCertificateButton").addEventListener("click", () => {
+      window.print();
+    });
+
+    $("retryButton").addEventListener("click", () => {
+      clearInterval(timerId);
+      timerId = null;
+      $("resultSection").hidden = true;
+      $("welcome").hidden = false;
+      $("welcome").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    $("clearScoresButton").addEventListener("click", () => {
+      const confirmed = confirm(
+        "Clear the saved scores from this browser on this device?"
+      );
+
+      if (!confirmed) return;
+
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (error) {
+        // No action needed if storage is unavailable.
+      }
+
+      renderLeaderboard();
+    });
+
+    renderLeaderboard();
+  </script>
 </body>
 </html>
